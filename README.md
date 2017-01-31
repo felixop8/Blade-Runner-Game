@@ -52,3 +52,11 @@ General:
 Sample Questions
 
 Your are watching a stage play.  The guests are enjoying the performance.  The appetizer consists of raw oysters.  The entree consists of boiled dog.
+
+
+easy
+  display all tips
+Medium
+  display all tips, but show colors in random order
+Hard
+  display just suspicion
