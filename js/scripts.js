@@ -40,3 +40,20 @@ Play.prototype.scorePlay = function () {
     };
   };
 };
+
+
+$(document).ready(function(){
+
+  $("form#user-input-form").submit(function(event){
+    event.preventDefault();
+    var feeling = $("input:radio[name=feeling-group]:checked").val();
+    var tone = $("input:radio[name=tone-group]:checked").val();
+    var intensity = $("input:radio[name=intensity-group]:checked").val();
+    var thisPlay = new Play(feeling,tone,intensity);
+    thisPlay.scorePlay();
+    console.log(thisPlay);
+  });
+
+
+
+});
