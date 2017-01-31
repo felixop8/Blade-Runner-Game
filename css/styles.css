@@ -1,3 +1,59 @@
+.jumbotron {
+  font-family: blade-runner;
+}
+
+.pulse-green {
+  animation: green 4s infinite;
+}
+
+@keyframes green {
+  0% {
+    background-color: white;
+  }
+  65% {
+    background-color: #91E778;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.pulse-yellow {
+  animation: yellow 4s infinite;
+
+}
+
+@keyframes yellow {
+  0% {
+    background-color: white;
+  }
+  65% {
+    background-color: #F9E597;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.pulse-red {
+  animation: red 4s infinite;
+
+}
+
+@keyframes red {
+  0% {
+    background-color: white;
+  }
+  65% {
+    background-color: #8D3A38;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: white;
+  }
+
 .difficulty-buttons {
   margin-bottom: 30px;
 }
@@ -26,11 +82,3 @@
 #player-lose-well {
   display: none;
 }
-
-
-
-/*
-button {
-  min-width: 50px;
-  height: 30px;
-}*/

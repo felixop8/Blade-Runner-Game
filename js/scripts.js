@@ -52,7 +52,19 @@ Game.prototype.endTurn = function(play) {
   };
 };
 
-
+Game.prototype.playDisplay = function(play) {
+  $('#feeling-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
+  $('#tone-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
+  $('#intensity-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
+  $('#round-suspicion').text(play.suspicion);
+  $('#total-suspicion').text(this.totalSuspicion);
+  $('.color-feeling').text(thisPlay.feelingColor);
+  $('.color-tone').text(thisPlay.toneColor);
+  $('.color-intensity').text(thisPlay.intensityColor);
+  // $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
+  // $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
+  // $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
+};
 
 $(document).ready(function(){
   $("form#user-input-form").submit(function(event){
@@ -64,11 +76,8 @@ $(document).ready(function(){
     thisPlay.scorePlay();
     globalGame.endTurn(thisPlay);
     console.log(thisPlay);
-    $('.round-suspicion').text(thisPlay.suspicion);
-    $('.total-suspicion').text(globalGame.totalSuspicion);
-    $('.color-feeling').text(thisPlay.feelingColor);
-    $('.color-tone').text(thisPlay.toneColor);
-    $('.color-intensity').text(thisPlay.intensityColor);
+    globalGame.playDisplay(thisPlay);
+
   });
 
   $("#easy-button").click(function(){
