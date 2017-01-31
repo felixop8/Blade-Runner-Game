@@ -52,7 +52,16 @@ Game.prototype.endTurn = function(play) {
   };
 };
 
-
+Game.prototype.playDisplay = function(play) {
+  $('#round-suspicion').text(play.suspicion);
+  $('#total-suspicion').text(this.totalSuspicion);
+  $('#color-feeling').text(play.feelingColor);
+  $('#color-tone').text(play.toneColor);
+  $('#color-intensity').text(play.intensityColor);
+  $('#feeling-answer-group').addClass("pulse-red");
+  $('#tone-tone').text(play.toneColor);
+  $('#intensity-intensity').text(play.intensityColor);
+};
 
 $(document).ready(function(){
 
@@ -65,11 +74,12 @@ $(document).ready(function(){
     thisPlay.scorePlay();
     globalGame.endTurn(thisPlay);
     console.log(thisPlay);
-    $('#round-suspicion').text(thisPlay.suspicion);
-    $('#total-suspicion').text(globalGame.totalSuspicion);
-    $('#color-feeling').text(thisPlay.feelingColor);
-    $('#color-tone').text(thisPlay.toneColor);
-    $('#color-intensity').text(thisPlay.intensityColor);
+    globalGame.playDisplay(thisPlay);
+    // $('#round-suspicion').text(thisPlay.suspicion);
+    // $('#total-suspicion').text(globalGame.totalSuspicion);
+    // $('#color-feeling').text(thisPlay.feelingColor);
+    // $('#color-tone').text(thisPlay.toneColor);
+    // $('#color-intensity').text(thisPlay.intensityColor);
   });
 
 
