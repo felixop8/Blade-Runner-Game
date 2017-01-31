@@ -53,14 +53,17 @@ Game.prototype.endTurn = function(play) {
 };
 
 Game.prototype.playDisplay = function(play) {
+  $('#feeling-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
+  $('#tone-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
+  $('#intensity-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('#round-suspicion').text(play.suspicion);
   $('#total-suspicion').text(this.totalSuspicion);
-  $('#color-feeling').text(play.feelingColor);
-  $('#color-tone').text(play.toneColor);
-  $('#color-intensity').text(play.intensityColor);
-  $('#feeling-answer-group').addClass("pulse-red");
-  $('#tone-tone').text(play.toneColor);
-  $('#intensity-intensity').text(play.intensityColor);
+  // $('#color-feeling').text(play.feelingColor);
+  // $('#color-tone').text(play.toneColor);
+  // $('#color-intensity').text(play.intensityColor);
+  $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
+  $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
+  $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
 };
 
 $(document).ready(function(){

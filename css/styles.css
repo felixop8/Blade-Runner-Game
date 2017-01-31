@@ -1,8 +1,44 @@
-.pulse-red {
-  animation: pulse 5s infinite;
+.jumbotron {
+  font-family: blade-runner;
 }
 
-@keyframes pulse {
+.pulse-green {
+  animation: green 4s infinite;
+}
+
+@keyframes green {
+  0% {
+    background-color: white;
+  }
+  65% {
+    background-color: green;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.pulse-yellow {
+  animation: yellow 4s infinite;
+}
+
+@keyframes yellow {
+  0% {
+    background-color: white;
+  }
+  65% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.pulse-red {
+  animation: red 4s infinite;
+}
+
+@keyframes red {
   0% {
     background-color: white;
   }
@@ -12,10 +48,6 @@
   100% {
     background-color: white;
   }
-}
-
-.jumbotron {
-  font-family: blade-runner;
 }
 
 .submit-button {
