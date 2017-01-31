@@ -16,16 +16,34 @@ Behavior: When the user reaches 20 suspicion, the game ends
 Project Mgmt:
 
 Back end
-Object constructors for game object and turn Object
-scoring method
-method for tracking and updating game state
-
 
 Front End
-15 input buttons and text output field
-Output for 3 colors and total suspicion (from method for tracking and updating game state)
-win/loss displays
 
+
+
+
+Wish List:
+
+Game behavior:
+  modify difficulty settings
+  display colors in different ways
+  display total suspicion in different ways
+  play through multiple Questions
+  associate content of questions with the hidden answer
+  display previous turns
+
+Styling:
+  Use blade-runner-esque typeface
+  change colors
+  Style page to look like VK machine
+
+
+Interactivity
+  Have page features move or color based on game input
+  animate display
+
+General:
+  list of multiple questions
 
 
 
