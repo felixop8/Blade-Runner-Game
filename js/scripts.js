@@ -65,6 +65,11 @@ $(document).ready(function(){
     thisPlay.scorePlay();
     globalGame.endTurn(thisPlay);
     console.log(thisPlay);
+    $('#round-suspicion').text(thisPlay.suspicion);
+    $('#total-suspicion').text(globalGame.totalSuspicion);
+    $('#color-feeling').text(thisPlay.feelingColor);
+    $('#color-tone').text(thisPlay.toneColor);
+    $('#color-intensity').text(thisPlay.intensityColor);
   });
 
 
