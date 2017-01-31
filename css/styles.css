@@ -11,7 +11,8 @@
     background-color: white;
   }
   65% {
-    background-color: green;
+    background-color: #91E778;
+    opacity: 0.6;
   }
   100% {
     background-color: white;
@@ -20,6 +21,7 @@
 
 .pulse-yellow {
   animation: yellow 4s infinite;
+
 }
 
 @keyframes yellow {
@@ -27,7 +29,8 @@
     background-color: white;
   }
   65% {
-    background-color: yellow;
+    background-color: #F9E597;
+    opacity: 0.6;
   }
   100% {
     background-color: white;
@@ -36,6 +39,7 @@
 
 .pulse-red {
   animation: red 4s infinite;
+
 }
 
 @keyframes red {
@@ -43,7 +47,8 @@
     background-color: white;
   }
   65% {
-    background-color: red;
+    background-color: #8D3A38;
+    opacity: 0.6;
   }
   100% {
     background-color: white;
