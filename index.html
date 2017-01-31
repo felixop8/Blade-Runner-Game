@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script type="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Replicant Mastermind</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Replicant Mastermind</h1>
+        <h3>A game based on Blade Runner's Voight-Kampff test</h3>
+      </div>
+
+<!-- well for interviewer questions -->
+      <div id="interviewer-question-well" class="well">
+        <h3>I'm gonna ask you a series of questions. Just relax and answer them as simply as you can...</h3>
+        <h4 id="question-text-field">You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?</h4>
+      </div>
+
+<!-- well for player win -->
+      <div id="player-win-well" class="well">
+        <h3>You Win!</h3>
+        <h4>You have convinced the interviewer that you are not a replicant. You are free to commit heinus acts of mayhem across the city.</h4>
+      </div>
+
+<!-- well for player lose -->
+      <div id="player-lose-well" class="well">
+        <h3>You Lose!</h3>
+        <h4>The interviewer has figured out that you're a replicant! Before you have time to run, he shoots you with his laser, right in your android face.</h4>
+      </div>
+
+
+<!-- ROW for all VK questions -->
+      <div id="user-input-row" class="row">
+        <form id="user-input-form">
+<!-- COLUMN for "feeling" VK questions -->
+          <div id="feeling-answer-group" class="col-md-4">
+            <h4>Feeling</h4>
+            <div class="radio feeling-answer-group">
+              <label>
+                <input type="radio" name="feeling-group" value="anger">Anger
+              </label>
+            </div>
+            <div class="radio feeling-answer-group">
+              <label>
+                <input type="radio" name="feeling-group" value="anxiety">Anxiety
+              </label>
+            </div>
+            <div class="radio feeling-answer-group">
+              <label>
+                <input type="radio" name="feeling-group" value="disgust">Disgust
+              </label>
+            </div>
+            <div class="radio feeling-answer-group">
+              <label>
+                <input type="radio" name="feeling-group" value="sadness">Sadness
+              </label>
+            </div>
+            <div class="radio feeling-answer-group">
+              <label>
+                <input type="radio" name="feeling-group" value="fear">Fear
+              </label>
+            </div>
+          </div>
+<!-- COLUMN for "feeling" VK questions -->
+          <div id="tone-answer-group" class="col-md-4">
+            <h4>Tone</h4>
+            <div class="radio tone-answer-group">
+              <label>
+                <input type="radio" name="tone-group" value="distant">Distant
+              </label>
+            </div>
+            <div class="radio tone-answer-group">
+              <label>
+                <input type="radio" name="tone-group" value="worried">Worried
+              </label>
+            </div>
+            <div class="radio tone-answer-group">
+              <label>
+                <input type="radio" name="tone-group" value="rude">Rude
+              </label>
+            </div>
+            <div class="radio tone-answer-group">
+              <label>
+                <input type="radio" name="tone-group" value="agitated">Agitated
+              </label>
+            </div>
+            <div class="radio tone-answer-group">
+              <label>
+                <input type="radio" name="tone-group" value="unsure">Unsure
+              </label>
+            </div>
+          </div>
+<!--COLUMN for "intesity" VK questions -->
+          <div id="intensity-answer-group" class="col-md-4">
+            <h4>Intensity</h4>
+            <div class="radio intensity-answer-group">
+              <label>
+                <input type="radio" name="intensity-group" value="animated">Animated
+              </label>
+            </div>
+            <div class="radio intensity-answer-group">
+              <label>
+                <input type="radio" name="intensity-group" value="focused">Focused
+              </label>
+            </div>
+            <div class="radio intensity-answer-group">
+              <label>
+                <input type="radio" name="intensity-group" value="subdued">Subdued
+              </label>
+            </div>
+            <div class="radio intensity-answer-group">
+              <label>
+                <input type="radio" name="intensity-group" value="reserved">Reserved
+              </label>
+            </div>
+            <div class="radio intensity-answer-group">
+              <label>
+                <input type="radio" name="intensity-group" value="distracted">Distracted
+              </label>
+            </div>
+          </div>
+          <div class="submit-button">
+            <button class="btn" type="submit">Submit your answers</button>
+          </div>
+        </form>
+      </div>
+<!-- end of ROW for all VK questions -->
+
+    </div>
+  </body>
+</html>
