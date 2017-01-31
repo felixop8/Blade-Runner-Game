@@ -56,11 +56,11 @@ Game.prototype.playDisplay = function(play) {
   $('#feeling-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('#tone-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('#intensity-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
-  $('#round-suspicion').text(play.suspicion);
-  $('#total-suspicion').text(this.totalSuspicion);
-  $('.color-feeling').text(thisPlay.feelingColor);
-  $('.color-tone').text(thisPlay.toneColor);
-  $('.color-intensity').text(thisPlay.intensityColor);
+  $('.round-suspicion').text(play.suspicion);
+  $('.total-suspicion').text(this.totalSuspicion);
+  $('.color-feeling').text(play.feelingColor);
+  $('.color-tone').text(play.toneColor);
+  $('.color-intensity').text(play.intensityColor);
   // $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
   // $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
   // $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
@@ -77,7 +77,6 @@ $(document).ready(function(){
     globalGame.endTurn(thisPlay);
     console.log(thisPlay);
     globalGame.playDisplay(thisPlay);
-
   });
 
   $("#easy-button").click(function(){
