@@ -15,6 +15,18 @@
         <h3>A game based on Blade Runner's Voight-Kampff test</h3>
       </div>
 
+      <div class="difficulty">
+        <div class="col-md-4">
+          <button type="button" name="easy" id="easy-button">easy</button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" name="medium" id="medium-button">Medium</button>
+        </div>
+        <div class="col-md-4">
+          <button type="button" name="hard" id="hard-button">HARD</button>
+        </div>
+      </div>
+
 <!-- well for interviewer questions -->
       <div id="interviewer-question-well" class="well">
         <h3>I'm gonna ask you a series of questions. Just relax and answer them as simply as you can...</h3>
@@ -25,12 +37,14 @@
       <div id="player-win-well" class="well">
         <h3>You Win!</h3>
         <h4>You have convinced the interviewer that you are not a replicant. You are free to commit heinus acts of mayhem across the city.</h4>
+        <button type="button" name="reset" class="play-again">Play Again</button>
       </div>
 
 <!-- well for player lose -->
       <div id="player-lose-well" class="well">
         <h3>You Lose!</h3>
         <h4>The interviewer has figured out that you're a replicant! Before you have time to run, he shoots you with his laser, right in your android face.</h4>
+        <button type="button" name="reset" class="play-again">Play Again</button>
       </div>
 
 <!-- ROW for all VK questions -->
@@ -130,14 +144,26 @@
       </div>
 <!-- end of ROW for all VK questions -->
 
-    <div id="answer-well" class="well">
-      <h4 class="suspicion">Suspicion:<span id="round-suspicion"></span></h4>
-      <h4 class="suspicion">Total Suspicion:<span id="total-suspicion"></span></h4>
-      <h4>Feeling Color: <span id="color-feeling"></span></h4>
-      <h4>Tone Color: <span id="color-tone"></span></h4>
-      <h4>Intensity Color: <span id="color-intensity"></span></h4>
-    </div>
-
+      <div id="answer-well-easy" class="well">
+        <h3>easy mode</h3>
+        <h4 class="suspicion">Suspicion:<span class="round-suspicion"></span></h4>
+        <h4 class="suspicion">Total Suspicion:<span class="total-suspicion"></span></h4>
+        <h4>Feeling Color: <span class="color-feeling"></span></h4>
+        <h4>Tone Color: <span class="color-tone"></span></h4>
+        <h4>Intensity Color: <span class="color-intensity"></span></h4>
+      </div>
+      <div id="answer-well-medium" class="well">
+        <h2>Medium Mode</h2>
+        <h4 class="suspicion">Suspicion:<span class="round-suspicion"></span></h4>
+        <h4 class="suspicion">Total Suspicion:<span class="total-suspicion"></span></h4>
+        <h4>Colors:</h4>
+        <h4><span class="color-intensity"></span> <span class="color-feeling"></span> <span class="color-tone"></span>
+      </div>
+      <div id="answer-well-hard" class="well">
+        <h1>HARD MODE</h1>
+        <h4 class="suspicion">Suspicion:<span class="round-suspicion"></span></h4>
+        <h4 class="suspicion">Total Suspicion:<span class="total-suspicion"></span></h4>
+      </div>
     </div>
   </body>
 </html>

@@ -1,5 +1,22 @@
+.difficulty-buttons {
+  margin-bottom: 30px;
+}
+
 .submit-button {
   text-align: center;
+}
+
+.difficulty{
+  padding-bottom: 52px;
+  text-align: center;
+}
+
+#answer-well-medium{
+  display: none;
+}
+
+#answer-well-hard{
+  display: none;
 }
 
 #player-win-well {
@@ -9,6 +26,7 @@
 #player-lose-well {
   display: none;
 }
+
 
 
 /*
