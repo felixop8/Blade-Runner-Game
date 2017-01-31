@@ -52,6 +52,11 @@ $(document).ready(function(){
     var thisPlay = new Play(feeling,tone,intensity);
     thisPlay.scorePlay();
     console.log(thisPlay);
+    $('#round-suspicion').text(" their backend for gathering round suspicion");
+    $('#total-suspicion').text(" their backend for gathering total suspicion");
+    $('#color-feeling').text(thisPlay.feelingColor);
+    $('#color-tone').text(thisPlay.toneColor);
+    $('#color-intensity').text(thisPlay.intensityColor);
   });
 
 
