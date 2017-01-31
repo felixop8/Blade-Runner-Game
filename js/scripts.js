@@ -58,16 +58,15 @@ Game.prototype.playDisplay = function(play) {
   $('#intensity-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('#round-suspicion').text(play.suspicion);
   $('#total-suspicion').text(this.totalSuspicion);
-  // $('#color-feeling').text(play.feelingColor);
-  // $('#color-tone').text(play.toneColor);
-  // $('#color-intensity').text(play.intensityColor);
-  $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
-  $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
-  $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
+  $('.color-feeling').text(thisPlay.feelingColor);
+  $('.color-tone').text(thisPlay.toneColor);
+  $('.color-intensity').text(thisPlay.intensityColor);
+  // $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
+  // $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
+  // $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
 };
 
 $(document).ready(function(){
-
   $("form#user-input-form").submit(function(event){
     event.preventDefault();
     var feeling = $("input:radio[name=feeling-group]:checked").val();
@@ -78,13 +77,27 @@ $(document).ready(function(){
     globalGame.endTurn(thisPlay);
     console.log(thisPlay);
     globalGame.playDisplay(thisPlay);
-    // $('#round-suspicion').text(thisPlay.suspicion);
-    // $('#total-suspicion').text(globalGame.totalSuspicion);
-    // $('#color-feeling').text(thisPlay.feelingColor);
-    // $('#color-tone').text(thisPlay.toneColor);
-    // $('#color-intensity').text(thisPlay.intensityColor);
+
   });
 
+  $("#easy-button").click(function(){
+    $("#answer-well-easy").show();
+    $("#answer-well-medium").hide();
+    $("#answer-well-hard").hide();
+  });
+  $("#medium-button").click(function(){
+    $("#answer-well-easy").hide();
+    $("#answer-well-medium").show();
+    $("#answer-well-hard").hide();
+  });
+  $("#hard-button").click(function(){
+    $("#answer-well-easy").hide();
+    $("#answer-well-medium").hide();
+    $("#answer-well-hard").show();
+  });
 
+  $('.play-again').click(function() {
+    location.reload();
+  });
 
 });
