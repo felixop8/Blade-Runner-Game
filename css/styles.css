@@ -1,10 +1,14 @@
 .submit-button {
   text-align: center;
-};
+}
 
+#player-win-well {
+  display: none;
+}
 
-
-
+#player-lose-well {
+  display: none;
+}
 
 
 /*

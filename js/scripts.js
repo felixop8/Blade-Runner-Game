@@ -15,7 +15,7 @@ function Game() {
   this.correctfeeling = this["feelingMenu"][Math.floor(Math.random()*5)];
   this.correcttone = this["toneMenu"][Math.floor(Math.random()*5)];
   this.correctintensity = this["intensityMenu"][Math.floor(Math.random()*5)];
-  this.totalSuspicion;
+  this.totalSuspicion =0;
   this.plays = [];
 }
 var globalGame = new Game();
@@ -41,6 +41,18 @@ Play.prototype.scorePlay = function () {
   };
 };
 
+Game.prototype.endTurn = function(play) {
+  this.totalSuspicion += play.suspicion;
+  this.plays.push(play);
+  if (play.suspicion === 0) {
+    $("#player-win-well").show();
+  };
+  if (this.totalSuspicion >= 20) {
+    $("#player-lose-well").show();
+  };
+};
+
+
 
 $(document).ready(function(){
 
@@ -51,6 +63,7 @@ $(document).ready(function(){
     var intensity = $("input:radio[name=intensity-group]:checked").val();
     var thisPlay = new Play(feeling,tone,intensity);
     thisPlay.scorePlay();
+    globalGame.endTurn(thisPlay);
     console.log(thisPlay);
     $('#round-suspicion').text(" their backend for gathering round suspicion");
     $('#total-suspicion').text(" their backend for gathering total suspicion");
