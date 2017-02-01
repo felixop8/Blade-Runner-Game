@@ -1,3 +1,11 @@
+#interviewer-question-well {
+  display: none;
+}
+
+#user-input-row {
+  display: none;
+}
+
 .jumbotron {
   font-family: blade-runner;
 }
@@ -66,6 +74,10 @@
 .difficulty{
   padding-bottom: 52px;
   text-align: center;
+}
+
+#answer-well-easy{
+  display: none;
 }
 
 #answer-well-medium{

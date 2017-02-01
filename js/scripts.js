@@ -108,18 +108,26 @@ Game.prototype.endTurn = function(play) {
   // check round win
   if (play.suspicion === 0) {
     $("#player-win-round-well").show();
+    setTimeout(function() {
+      $("#player-win-round-well").fadeOut(500);
+    }, 2000);
     this.wins +=1;
+    this.roundSuspicion =0;
+    globalGame.newQuestion(this.questions[this.wins+this.losses]);
   } else if (this.roundSuspicion >= 20) {
     $("#player-lose-round-well").show();
+    setTimeout(function() {
+      $("#player-lose-round-well").fadeOut(500);
+    }, 2000);
     this.losses +=1;
+    this.roundSuspicion =0;
+    globalGame.newQuestion(this.questions[this.wins+this.losses]);
   }
   // check global win
   if (this.wins >= 3) {
     $("#player-win-game-well").show();
   } else if (this.losses >= 3) {
     $("#player-lose-game-well").show();
-  } else {
-    globalGame.newQuestion(this.questions[this.wins+this.losses]);
   }
 };
 
@@ -173,6 +181,10 @@ $(document).ready(function(){
   });
 
   $("#new-game-button").click(function() {
+    $("#initiate-game").hide();
+    $("#interviewer-question-well").show();
+    $("#user-input-row").show();
+    $("#answer-well-easy").show();
     $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
   });
 
