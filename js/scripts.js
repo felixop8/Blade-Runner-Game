@@ -8,19 +8,46 @@ function Play(feeling,tone,intensity) {
   this.intensityColor;
 }
 
+function Question(){
+  this.feelingMenu;
+  this.toneMenu;
+  this.intensityMenu;
+  this.questionsText;
+  this.followUp;
+}
+
+
 function Game() {
   this.feelingMenu = ["anger","anxiety","disgust","sadness","fear"];
   this.toneMenu = ["distant","worried","rude","agitated","unsure"];
   this.intensityMenu = ["animated","focused","subdued","reserved","distracted"];
-  this.correctfeeling = this["feelingMenu"][Math.floor(Math.random()*5)];
-  this.correcttone = this["toneMenu"][Math.floor(Math.random()*5)];
-  this.correctintensity = this["intensityMenu"][Math.floor(Math.random()*5)];
+  this.correctfeeling;
+  this.correcttone;
+  this.correctintensity;
   this.totalSuspicion =0;
   this.plays = [];
 }
+
+
 var globalGame = new Game();
 var testPlay = new Play("anxiety","worried","focused");
+var turtleQuestion = new Question();
+turtleQuestion = {
+  feelingMenu: ["anger","anxiety","disgust"],
+  toneMenu: ["distant","worried","rude"],
+  intensityMenu: ["animated","focused","subdued"]
+  questionsText: ["You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."]
+}
+var calfQuestion = new Question();
 
+
+
+
+Game.prototype.newQuestion = function (question) {
+    this.correctfeeling = question["feelingMenu"][Math.floor(Math.random()*3)];
+    this.correcttone = question["toneMenu"][Math.floor(Math.random()*3)];
+    this.correctintensity= question["intensityMenu"][Math.floor(Math.random()*3)];
+};
 
 Play.prototype.scorePlay = function () {
   var categories = ["feeling","tone","intensity"];
