@@ -76,11 +76,19 @@
   display: none;
 }
 
-#player-win-well {
+#player-win-game-well {
   display: none;
 }
 
-#player-lose-well {
+#player-lose-game-well {
+  display: none;
+}
+
+#player-win-round-well {
+  display: none;
+}
+
+#player-lose-round-well {
   display: none;
 }
 
