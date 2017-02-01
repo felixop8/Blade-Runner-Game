@@ -48,124 +48,208 @@
         <button type="button" name="reset" class="play-again">Play Again</button>
       </div>
 
-<!--Start Form   -->
-      <form id="user-input-form">
-        <div class="row" id="categories">
-          <div class="col-md-4">
-            <h3>Feeling</h3>
-          </div>
-          <div class="col-md-4">
-            <h3>Tone</h3>
-          </div>
-          <div class="col-md-4">
-            <h3>Intensity</h3>
-          </div>
-        </div>
 
-        <div class="row" id="first-selectors">
-          <div class="col-md-4">
-            <div class="radio feeling-answer-group">
+    <form id="user-input-form">
+
+        <!--Feeling  -->
+        <div class="col-sm-6">
+          <h3 class="label-center feelingLabel">Feeling</h3>
+          <div class="col-sm-12">
+            <div class="radio feeling-answer-group label-center">
                 <input type="radio" name="feeling-group" value="anger" id="anger">
-                <label for="anger">Anger</label>
+                <label for="anger" id="angerLabel">Anger</label>
+            </div>
+            <div class="row">
+              <div class="col-sm-3 zero">
+                <div class="radio feeling-answer-group sides">
+                    <input type="radio" name="feeling-group" value="fear" id="fear">
+                    <label id="fearLabel" for="fear">Fear</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="full-penagon">
+                  <div id="triangle-top-left" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-top-right" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-bottom" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-bottom-left" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-bottom-right" class="feeling-triangle">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 zero">
+                <div class="radio feeling-answer-group sides">
+                    <input type="radio" name="feeling-group" value="anxiety" id="anxiety">
+                    <label id="anxietyLabel" for="anxiety">Anxiety</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+
+              </div>
+              <div class="col-sm-8">
+                <div class="col-sm-3 sadness">
+                  <div class="radio feeling-answer-group">
+                      <input type="radio" name="feeling-group" value="sadness" id="sadness">
+                      <label for="sadness">Sadness</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-3">
+                  <div class="radio feeling-answer-group">
+                      <input type="radio" name="feeling-group" value="disgust" id="disgust">
+                      <label id="disgustLabel" for="disgust">Disgust</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2">
+
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="radio tone-answer-group">
+        </div>
+
+        <!--Tone  -->
+        <div class="col-md-6">
+          <h3 class="label-center toneLabel">Tone</h3>
+          <div class="col-md-12">
+            <div class="radio tone-answer-group label-center">
                 <input type="radio" name="tone-group" value="distant" id="distant">
-                <label for="distant">Distant</label>
+                <label id="distantLabel" for="distant">Distant</label>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="radio tone-answer-group sides">
+                    <input type="radio" name="tone-group" value="unsure" id="unsure">
+                    <label id="unsureLabel" for="unsure">Unsure</label>
+                </div>
+              </div>
+              <div class="col-md-6" class="zero">
+                <div class="full-penagon">
+                  <div id="triangle-top-left">
+                  </div>
+                  <div id="triangle-top-right">
+                  </div>
+                  <div id="triangle-bottom">
+                  </div>
+                  <div id="triangle-bottom-left">
+                  </div>
+                  <div id="triangle-bottom-right">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3" class="zero">
+                <div class="radio tone-answer-group sides">
+                    <input type="radio" name="tone-group" value="worried" id="worried">
+                    <label for="worried" id="worriedLabel">Worried</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+
+              </div>
+              <div class="col-md-8">
+                <div class="col-md-3">
+                  <div class="radio tone-answer-group">
+                      <input type="radio" name="tone-group" value="agitated" id="agitated">
+                      <label for="agitated">Agitated</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-3">
+                  <div class="radio tone-answer-group">
+                    <input type="radio" name="tone-group" value="rude" id="rude">
+                      <label id="rudeLabel" for="rude">Rude</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="radio intensity-answer-group">
+        </div>
+
+        <!--Intensity  -->
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <h3 class="label-center intensityLabel">Intensity</h3>
+          <div class="col-md-12">
+            <div class="radio intensity-answer-group label-center">
                 <input type="radio" name="intensity-group" value="animated" id="animated">
-                <label for="animated">Animated</label>
+                <label id="animatedLabel" for="animated">Animated</label>
             </div>
-          </div>
-        </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="radio intensity-answer-group sides">
+                    <input type="radio" name="intensity-group" value="distracted" id="distracted">
+                    <label id="distractedLabel" for="distracted">Distracted</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="full-penagon">
+                  <div id="triangle-top-left">
+                  </div>
+                  <div id="triangle-top-right">
+                  </div>
+                  <div id="triangle-bottom">
+                  </div>
+                  <div id="triangle-bottom-left">
+                  </div>
+                  <div id="triangle-bottom-right">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="radio intensity-answer-group sides">
+                    <input type="radio" name="intensity-group" value="focused" id="focused">
+                    <label id="focusedLabel" for="focused">Focused</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
 
-        <div class="row" id="second-selectors">
-          <div class="col-md-2">
-            <div class="radio feeling-answer-group">
-                <input type="radio" name="feeling-group" value="fear" id="fear">
-                <label for="fear">Fear</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio feeling-answer-group">
-                <input type="radio" name="feeling-group" value="anxiety" id="anxiety">
-                <label for="anxiety">Anxiety</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio tone-answer-group">
-                <input type="radio" name="tone-group" value="unsure" id="unsure">
-                <label for="unsure">Unsure</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio tone-answer-group">
-                <input type="radio" name="tone-group" value="worried" id="worried">
-                <label for="worried">Worried</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio intensity-answer-group">
-                <input type="radio" name="intensity-group" value="distracted" id="distracted">
-                <label for="distracted">Distracted</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio intensity-answer-group">
-                <input type="radio" name="intensity-group" value="focused" id="focused">
-                <label for="focused">Focused</label>
-            </div>
-          </div>
-        </div>
-``
-        <div class="row" id="third-selectors">
-          <div class="col-md-2">
-            <div class="radio feeling-answer-group">
-                <input type="radio" name="feeling-group" value="sadness" id="sadness">
-                <label for="sadness">Sadness</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio feeling-answer-group">
-                <input type="radio" name="feeling-group" value="disgust" id="disgust">
-                <label for="disgust">Disgust</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio tone-answer-group">
-                <input type="radio" name="tone-group" value="agitated" id="agitated">
-                <label for="agitated">Agitated</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio tone-answer-group">
-                <input type="radio" name="tone-group" value="rude" id="rude">
-                <label for="rude">Rude</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio intensity-answer-group">
-                <input type="radio" name="intensity-group" value="reserved" id="reserved">
-                <label for="reserved">Reserved</label>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="radio intensity-answer-group">
+              </div>
+              <div class="col-md-8">
+                <div class="col-md-3">
+                  <div class="radio intensity-answer-group">
+                      <input type="radio" name="intensity-group" value="reserved" id="reserved">
+                      <label id="reservedLabel" for="reserved">Reserved</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
 
-                <input type="radio" name="intensity-group" value="subdued" id="subdued">
-                <label for="subdued">Subdued</label>
+                </div>
+                <div class="col-md-3">
+                  <div class="radio intensity-answer-group">
+                      <input type="radio" name="intensity-group" value="subdued" id="subdued">
+                      <label id="subduedLabel" for="subdued">Subdued</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+
+              </div>
             </div>
           </div>
         </div>
-        <div class="submit-button">
-          <button class="btn" type="submit">Submit your answers</button>
-        </div>
+      </div>
+      <div class="submit-button">
+        <button class="btn" type="submit">Submit your answers</button>
+      </div>
     </form>
-    <!--End Form  -->
 
       <div id="answer-well-easy" class="well">
         <h3>easy mode</h3>

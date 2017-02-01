@@ -61,9 +61,9 @@ Game.prototype.playDisplay = function(play) {
   $('.color-feeling').text(play.feelingColor);
   $('.color-tone').text(play.toneColor);
   $('.color-intensity').text(play.intensityColor);
-  // $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
-  // $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
-  // $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
+  $('.feeling-triangle').addClass("pulse-"+play["feelingColor"]);
+  $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
+  $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
 };
 
 $(document).ready(function(){

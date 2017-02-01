@@ -1,4 +1,130 @@
 
+.label-center {
+  text-align: center;
+}
+
+.feelingLabel {
+  padding-left: 15px;
+}
+
+.toneLabel {
+  padding-left: 10px;
+}
+
+.intensityLabel {
+  padding-left: 10px;
+}
+
+.sides {
+  /*text-align: center;*/
+  padding-top: 80px;
+}
+
+.full-penagon {
+  padding-left: 25px;
+  padding-right: 0px;
+}
+
+#worriedLabel {
+  padding-left: 0px;
+  padding-right:100px;
+}
+#rudeLabel {
+  padding-left: 0px;
+  padding-right:100px;
+}
+#focusedLabel {
+  padding-left: 0px;
+  padding-right:100px;
+}
+#subduedLabel {
+  padding-left: 0px;
+  padding-right:100px;
+}
+#disgustLabel {
+  padding-left: 0px;
+  padding-right:100px;
+}
+#anxietyLabel {
+  padding-left: 0px;
+  padding-right:100px;
+}
+
+#reservedLabel {
+  padding-left: 30px;
+}
+
+#distractedLabel {
+  padding-left: 50px;
+}
+
+#fearLabel {
+  padding-left: 85px;
+}
+
+#unsureLabel {
+  padding-left: 75px;
+}
+
+#angerLabel {
+  padding-left: 10px;
+}
+
+#animatedLabel {
+  padding-left: 10px;
+}
+
+#distantLabel {
+  padding-left: 10px;
+}
+
+/* Pentagon*/
+#triangle-bottom {
+  	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid orange;
+  margin-left: 50px;
+}
+
+#triangle-bottom-right {
+	width: 0;
+	height: 0;
+  margin-left: 100px;
+  margin-top: -100px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid green;
+}
+
+#triangle-bottom-left {
+	width: 0;
+	height: 0;
+  margin-left: -100;
+  margin-top: -100px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid blue;
+}
+
+#triangle-top-right {
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid red;
+	border-right: 100px solid transparent;
+  margin-left: 100px;
+}
+
+#triangle-top-left {
+  float: left;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid pink;
+  border-left: 100px solid transparent;
+}
+
+
 input {
     visibility:hidden;
 }
@@ -70,6 +196,7 @@ input:checked + label {
 
 .submit-button {
   text-align: center;
+  padding-top: 70px;
 }
 
 .difficulty{
@@ -109,4 +236,8 @@ input:checked + label {
 
 #player-lose-well {
   display: none;
+}
+
+.well {
+  border-radius: 50px;
 }
