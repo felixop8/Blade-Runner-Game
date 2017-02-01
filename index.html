@@ -48,102 +48,124 @@
         <button type="button" name="reset" class="play-again">Play Again</button>
       </div>
 
-<!-- ROW for all VK questions -->
-      <div id="user-input-row" class="row">
-        <form id="user-input-form">
-<!-- COLUMN for "feeling" VK questions -->
-          <div id="feeling-answer-group" class="col-md-4 green-background yellow-background">
-            <h4>Feeling</h4>
+<!--Start Form   -->
+      <form id="user-input-form">
+        <div class="row" id="categories">
+          <div class="col-md-4">
+            <h3>Feeling</h3>
+          </div>
+          <div class="col-md-4">
+            <h3>Tone</h3>
+          </div>
+          <div class="col-md-4">
+            <h3>Intensity</h3>
+          </div>
+        </div>
+
+        <div class="row" id="first-selectors">
+          <div class="col-md-4">
             <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="anger">Anger
-              </label>
-            </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="anxiety">Anxiety
-              </label>
-            </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="disgust">Disgust
-              </label>
-            </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="sadness">Sadness
-              </label>
-            </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="fear">Fear
-              </label>
+                <input type="radio" name="feeling-group" value="anger" id="anger">
+                <label for="anger">Anger</label>
             </div>
           </div>
-<!-- COLUMN for "tone" VK questions -->
-          <div id="tone-answer-group" class="col-md-4">
-            <h4>Tone</h4>
+          <div class="col-md-4">
             <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="distant">Distant
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="worried">Worried
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="rude">Rude
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="agitated">Agitated
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="unsure">Unsure
-              </label>
+                <input type="radio" name="tone-group" value="distant" id="distant">
+                <label for="distant">Distant</label>
             </div>
           </div>
-<!--COLUMN for "intesity" VK questions -->
-          <div id="intensity-answer-group" class="col-md-4">
-            <h4>Intensity</h4>
+          <div class="col-md-4">
             <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="animated">Animated
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="focused">Focused
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="subdued">Subdued
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="reserved">Reserved
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="distracted">Distracted
-              </label>
+                <input type="radio" name="intensity-group" value="animated" id="animated">
+                <label for="animated">Animated</label>
             </div>
           </div>
-          <div class="submit-button">
-            <button class="btn" type="submit">Submit your answers</button>
+        </div>
+
+        <div class="row" id="second-selectors">
+          <div class="col-md-2">
+            <div class="radio feeling-answer-group">
+                <input type="radio" name="feeling-group" value="fear" id="fear">
+                <label for="fear">Fear</label>
+            </div>
           </div>
-        </form>
-      </div>
-<!-- end of ROW for all VK questions -->
+          <div class="col-md-2">
+            <div class="radio feeling-answer-group">
+                <input type="radio" name="feeling-group" value="anxiety" id="anxiety">
+                <label for="anxiety">Anxiety</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio tone-answer-group">
+                <input type="radio" name="tone-group" value="unsure" id="unsure">
+                <label for="unsure">Unsure</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio tone-answer-group">
+                <input type="radio" name="tone-group" value="worried" id="worried">
+                <label for="worried">Worried</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio intensity-answer-group">
+                <input type="radio" name="intensity-group" value="distracted" id="distracted">
+                <label for="distracted">Distracted</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio intensity-answer-group">
+                <input type="radio" name="intensity-group" value="focused" id="focused">
+                <label for="focused">Focused</label>
+            </div>
+          </div>
+        </div>
+``
+        <div class="row" id="third-selectors">
+          <div class="col-md-2">
+            <div class="radio feeling-answer-group">
+                <input type="radio" name="feeling-group" value="sadness" id="sadness">
+                <label for="sadness">Sadness</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio feeling-answer-group">
+                <input type="radio" name="feeling-group" value="disgust" id="disgust">
+                <label for="disgust">Disgust</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio tone-answer-group">
+                <input type="radio" name="tone-group" value="agitated" id="agitated">
+                <label for="agitated">Agitated</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio tone-answer-group">
+                <input type="radio" name="tone-group" value="rude" id="rude">
+                <label for="rude">Rude</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio intensity-answer-group">
+                <input type="radio" name="intensity-group" value="reserved" id="reserved">
+                <label for="reserved">Reserved</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="radio intensity-answer-group">
+
+                <input type="radio" name="intensity-group" value="subdued" id="subdued">
+                <label for="subdued">Subdued</label>
+            </div>
+          </div>
+        </div>
+        <div class="submit-button">
+          <button class="btn" type="submit">Submit your answers</button>
+        </div>
+    </form>
+    <!--End Form  -->
 
       <div id="answer-well-easy" class="well">
         <h3>easy mode</h3>
