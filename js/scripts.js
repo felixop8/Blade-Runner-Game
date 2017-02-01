@@ -28,6 +28,7 @@ function Game() {
   this.correctintensity;
   this.roundSuspicion =0;
   this.totalSuspicion =0;
+  this.turnCounter =0;
   // this.plays = [];
   this.questions = [turtleQuestion];
 }
@@ -80,6 +81,7 @@ Game.prototype.endTurn = function(play) {
   if (this.roundSuspicion >= 20) {
     $("#player-lose-well").show();
   };
+  this.turnCounter +=1;
 };
 
 Game.prototype.playDisplay = function(play) {
@@ -91,6 +93,9 @@ Game.prototype.playDisplay = function(play) {
   $('.color-feeling').text(play.feelingColor);
   $('.color-tone').text(play.toneColor);
   $('.color-intensity').text(play.intensityColor);
+  var counter = this.turnCounter;
+  console.log(counter);
+  $("#question-text-field").text(globalGame.questions[0]["questionsText"][counter]);
   // $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
   // $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
   // $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
