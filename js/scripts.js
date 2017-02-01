@@ -26,8 +26,9 @@ function Game() {
   this.correctfeeling;
   this.correcttone;
   this.correctintensity;
+  this.roundSuspicion =0;
   this.totalSuspicion =0;
-  this.plays = [];
+  // this.plays = [];
   this.questions = [turtleQuestion];
 }
 
@@ -71,12 +72,12 @@ Play.prototype.scorePlay = function () {
 };
 
 Game.prototype.endTurn = function(play) {
-  this.totalSuspicion += play.suspicion;
-  this.plays.push(play);
+  this.roundSuspicion += play.suspicion;
+  // this.plays.push(play);
   if (play.suspicion === 0) {
     $("#player-win-well").show();
   };
-  if (this.totalSuspicion >= 20) {
+  if (this.roundSuspicion >= 20) {
     $("#player-lose-well").show();
   };
 };
@@ -85,8 +86,8 @@ Game.prototype.playDisplay = function(play) {
   $('#feeling-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('#tone-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('#intensity-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
-  $('.round-suspicion').text(play.suspicion);
-  $('.total-suspicion').text(this.totalSuspicion);
+  $('.turn-suspicion').text(play.suspicion);
+  $('.round-suspicion').text(this.roundSuspicion);
   $('.color-feeling').text(play.feelingColor);
   $('.color-tone').text(play.toneColor);
   $('.color-intensity').text(play.intensityColor);
