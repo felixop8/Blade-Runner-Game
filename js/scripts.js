@@ -1,3 +1,5 @@
+var calfQuestion = new Question();
+
 function Play(feeling,tone,intensity) {
   this.feeling = feeling;
   this.tone= tone;
@@ -26,19 +28,19 @@ function Game() {
   this.correctintensity;
   this.totalSuspicion =0;
   this.plays = [];
+  this.questions = [turtleQuestion];
 }
 
 
-var globalGame = new Game();
 var testPlay = new Play("anxiety","worried","focused");
 var turtleQuestion = new Question();
 turtleQuestion = {
   feelingMenu: ["anger","anxiety","disgust"],
   toneMenu: ["distant","worried","rude"],
-  intensityMenu: ["animated","focused","subdued"]
-  questionsText: ["You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."]
-}
-var calfQuestion = new Question();
+  intensityMenu: ["animated","focused","subdued"],
+  questionsText: ["You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."],
+};
+var globalGame = new Game();
 
 
 
@@ -120,6 +122,12 @@ $(document).ready(function(){
     $("#answer-well-easy").hide();
     $("#answer-well-medium").hide();
     $("#answer-well-hard").show();
+  });
+
+  $("#new-game-button").click(function() {
+    $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
+
+    console.log(globalGame.questions[0]["questionsText"][0])
   });
 
   $('.play-again').click(function() {

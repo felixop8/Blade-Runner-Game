@@ -83,3 +83,7 @@
 #player-lose-well {
   display: none;
 }
+
+#new-game-button {
+  text-align: center;
+};

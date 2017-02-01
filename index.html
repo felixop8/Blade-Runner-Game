@@ -16,22 +16,28 @@
         <h3>a game based on blade runner's voight-kampff test</h3>
       </div>
 
-      <div class="difficulty">
-        <div class="col-md-4">
-          <button type="button" name="easy" id="easy-button">easy</button>
+<!-- well for game initiation -->
+      <div class="well">
+        <div class="difficulty">
+          <div class="col-md-4">
+            <button class="btn" type="button" name="easy" id="easy-button">easy</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn" type="button" name="medium" id="medium-button">Medium</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn" type="button" name="hard" id="hard-button">HARD</button>
+          </div>
         </div>
-        <div class="col-md-4">
-          <button type="button" name="medium" id="medium-button">Medium</button>
-        </div>
-        <div class="col-md-4">
-          <button type="button" name="hard" id="hard-button">HARD</button>
+        <div id="new-game-button">
+          <button class="btn" type="button">Begin Test</button>
         </div>
       </div>
 
 <!-- well for interviewer questions -->
       <div id="interviewer-question-well" class="well">
         <h3>I'm gonna ask you a series of questions. Just relax and answer them as simply as you can...</h3>
-        <h4 id="question-text-field">You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?</h4>
+        <h4 id="question-text-field"></h4>
       </div>
 
 <!-- well for player win -->
@@ -144,6 +150,7 @@
         </form>
       </div>
 <!-- end of ROW for all VK questions -->
+
 
       <div id="answer-well-easy" class="well">
         <h3>easy mode</h3>
