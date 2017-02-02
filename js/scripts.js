@@ -18,6 +18,7 @@ function Question(){
 
 
 function Game() {
+  this.difficulty = "easy";
   this.feelingMenu = ["anger","anxiety","disgust","sadness","fear"];
   this.toneMenu = ["distant","worried","rude","agitated","unsure"];
   this.intensityMenu = ["animated","focused","subdued","reserved","distracted"];
@@ -132,22 +133,59 @@ Game.prototype.endTurn = function(play) {
 };
 
 Game.prototype.playDisplay = function(play) {
-  $('#feeling-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
-  $('#tone-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
-  $('#intensity-answer-group').removeClass("pulse-green pulse-yellow pulse-red");
   $('.turn-suspicion').text(play.suspicion);
   $('.round-suspicion').text(this.roundSuspicion);
-  $('.color-feeling').text(play.feelingColor);
-  $('.color-tone').text(play.toneColor);
-  $('.color-intensity').text(play.intensityColor);
+  if (this.difficulty === "easy"){
+    colorTriangles(play.feelingColor,play.toneColor,play.intensityColor);
+  } else if (this.difficulty === "medium") {
 
+  }
   var turncounter = this.turnCounter;
   var roundcounter = this.wins + this.losses;
   $("#question-text-field").text(globalGame.questions[roundcounter]["questionsText"][turncounter]);
-  // $('#feeling-answer-group').addClass("pulse-"+play["feelingColor"]);
-  // $('#tone-answer-group').addClass("pulse-"+play["toneColor"]);
-  // $('#intensity-answer-group').addClass("pulse-"+play["intensityColor"]);
 };
+
+var randomizeArray = function(array) {
+  var container =[];
+  for (i=0;array.length>i;){
+    var randoNumber = Math.floor(Math.random()*array.length);
+    var moveElement = array[randoNumber];
+    container.push(moveElement);
+    array.splice(randoNumber,1);
+  }
+  return container;
+};
+
+
+var colorTriangles = function(feelingColor,toneColor,intensityColor) {
+  // remove classes
+  var classesToRemove = "triangle-bottom-red triangle-bottom-yellow triangle-bottom-green triangle-top-green triangle-top-yellow triangle-top-red "
+  $(".triangle-bottom").removeClass(classesToRemove);
+  $(".triangle-top-left").removeClass(classesToRemove);
+  $(".triangle-top-right").removeClass(classesToRemove);
+  $(".triangle-bottom-left").removeClass(classesToRemove);
+  $(".triangle-bottom-right").removeClass(classesToRemove);
+  // color feeling pentagon
+  $("#feelingPentagon .triangle-bottom").addClass("triangle-bottom-" +feelingColor);
+  $("#feelingPentagon .triangle-bottom-left").addClass("triangle-top-" +feelingColor);
+  $("#feelingPentagon .triangle-bottom-right").addClass("triangle-top-" +feelingColor);
+  $("#feelingPentagon .triangle-top-right").addClass("triangle-bottom-" +feelingColor);
+  $("#feelingPentagon .triangle-top-left").addClass("triangle-bottom-" +feelingColor);
+  // color tone pentagon
+  $("#tonePentagon .triangle-bottom").addClass("triangle-bottom-" +toneColor);
+  $("#tonePentagon .triangle-bottom-left").addClass("triangle-top-" +toneColor);
+  $("#tonePentagon .triangle-bottom-right").addClass("triangle-top-" +toneColor);
+  $("#tonePentagon .triangle-top-right").addClass("triangle-bottom-" +toneColor);
+  $("#tonePentagon .triangle-top-left").addClass("triangle-bottom-" +toneColor);
+  // color intensity pentagon
+  $("#intensityPentagon .triangle-bottom").addClass("triangle-bottom-" +intensityColor);
+  $("#intensityPentagon .triangle-bottom-left").addClass("triangle-top-" +intensityColor);
+  $("#intensityPentagon .triangle-bottom-right").addClass("triangle-top-" +intensityColor);
+  $("#intensityPentagon .triangle-top-right").addClass("triangle-bottom-" +intensityColor);
+  $("#intensityPentagon .triangle-top-left").addClass("triangle-bottom-" +intensityColor);
+
+};
+
 
 
 globalGame.newQuestion(globalGame.questions[0]);
@@ -166,31 +204,31 @@ $(document).ready(function(){
   });
 
   $("#easy-button").click(function(){
-    $("#answer-well-easy").show();
-    $("#answer-well-medium").hide();
-    $("#answer-well-hard").hide();
+    // game.difficulty =
+
   });
   $("#medium-button").click(function(){
-    $("#answer-well-easy").hide();
-    $("#answer-well-medium").show();
-    $("#answer-well-hard").hide();
+    // game.difficulty =
+
   });
   $("#hard-button").click(function(){
-    $("#answer-well-easy").hide();
-    $("#answer-well-medium").hide();
-    $("#answer-well-hard").show();
+    // game.difficulty =
+
   });
 
   $("#new-game-button").click(function() {
     $("#initiate-game").hide();
     $("#interviewer-question-well").show();
     $("#user-input-row").show();
-    $("#answer-well-easy").show();
+    $("#restart-game").show();
+    $(".submit-button").show();
+    $("#answer-well").show();
     $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
   });
 
   $('.play-again').click(function() {
     location.reload();
   });
+
 
 });

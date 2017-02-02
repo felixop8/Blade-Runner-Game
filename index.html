@@ -10,11 +10,11 @@
   </head>
   <body>
     <div class="container">
-
-      <div class="jumbotron">
+      <header>
         <h1>replicant mastermind</h1>
         <h3>a game based on blade runner's voight-kampff test</h3>
-      </div>
+      </header>
+
 
 <!-- well for game initiation -->
       <div id="initiate-game" class="well">
@@ -88,16 +88,16 @@
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="full-penagon">
-                  <div id="triangle-top-left" class="feeling-triangle">
+                <div id="feelingPentagon" class="full-penagon">
+                  <div class="triangle-top-left" class="feeling-triangle">
                   </div>
-                  <div id="triangle-top-right" class="feeling-triangle">
+                  <div class="triangle-top-right" class="feeling-triangle">
                   </div>
-                  <div id="triangle-bottom" class="feeling-triangle">
+                  <div class="triangle-bottom" class="feeling-triangle">
                   </div>
-                  <div id="triangle-bottom-left" class="feeling-triangle">
+                  <div class="triangle-bottom-left" class="feeling-triangle">
                   </div>
-                  <div id="triangle-bottom-right" class="feeling-triangle">
+                  <div class="triangle-bottom-right" class="feeling-triangle">
                   </div>
                 </div>
               </div>
@@ -152,16 +152,16 @@
                 </div>
               </div>
               <div class="col-md-6" class="zero">
-                <div class="full-penagon">
-                  <div id="triangle-top-left">
+                <div id="tonePentagon" class="full-penagon">
+                  <div class="triangle-top-left">
                   </div>
-                  <div id="triangle-top-right">
+                  <div class="triangle-top-right">
                   </div>
-                  <div id="triangle-bottom">
+                  <div class="triangle-bottom">
                   </div>
-                  <div id="triangle-bottom-left">
+                  <div class="triangle-bottom-left">
                   </div>
-                  <div id="triangle-bottom-right">
+                  <div class="triangle-bottom-right">
                   </div>
                 </div>
               </div>
@@ -220,16 +220,16 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="full-penagon">
-                  <div id="triangle-top-left">
+                <div id="intensityPentagon" class="full-penagon">
+                  <div class="triangle-top-left">
                   </div>
-                  <div id="triangle-top-right">
+                  <div class="triangle-top-right">
                   </div>
-                  <div id="triangle-bottom">
+                  <div class="triangle-bottom">
                   </div>
-                  <div id="triangle-bottom-left">
+                  <div class="triangle-bottom-left">
                   </div>
-                  <div id="triangle-bottom-right">
+                  <div class="triangle-bottom-right">
                   </div>
                 </div>
               </div>
@@ -267,33 +267,25 @@
             </div>
           </div>
         </div>
+        <div class="col-md-3">
+          <div id="answer-well" class="well">
+            <h1>Game Stats</h1>
+            <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
+            <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
+          </div>
+
+        </div>
       </div>
       <div class="submit-button">
         <button class="btn" type="submit">Submit your answers</button>
       </div>
     </form>
 
+    <div class="reset-button">
+      <button type="button" name="reset" id="restart-game" class="btn  play-again">Restart Test</button>
+    </div>
 
-      <div id="answer-well-easy" class="well">
-        <h3>easy mode</h3>
-        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
-        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
-        <h4>Feeling Color: <span class="color-feeling"></span></h4>
-        <h4>Tone Color: <span class="color-tone"></span></h4>
-        <h4>Intensity Color: <span class="color-intensity"></span></h4>
-      </div>
-      <div id="answer-well-medium" class="well">
-        <h2>Medium Mode</h2>
-        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
-        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
-        <h4>Colors:</h4>
-        <h4><span class="color-intensity"></span> <span class="color-feeling"></span> <span class="color-tone"></span>
-      </div>
-      <div id="answer-well-hard" class="well">
-        <h1>HARD MODE</h1>
-        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
-        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
-      </div>
+
 
     </div>
   </body>
