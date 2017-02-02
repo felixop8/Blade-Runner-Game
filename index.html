@@ -16,155 +16,285 @@
         <h3>a game based on blade runner's voight-kampff test</h3>
       </div>
 
-      <div class="difficulty">
-        <div class="col-md-4">
-          <button type="button" name="easy" id="easy-button">easy</button>
+<!-- well for game initiation -->
+      <div id="initiate-game" class="well">
+        <div class="difficulty">
+          <div class="col-md-4">
+            <button class="btn" type="button" name="easy" id="easy-button">easy</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn" type="button" name="medium" id="medium-button">Medium</button>
+          </div>
+          <div class="col-md-4">
+            <button class="btn" type="button" name="hard" id="hard-button">HARD</button>
+          </div>
         </div>
-        <div class="col-md-4">
-          <button type="button" name="medium" id="medium-button">Medium</button>
-        </div>
-        <div class="col-md-4">
-          <button type="button" name="hard" id="hard-button">HARD</button>
+        <div id="new-game-button">
+          <button class="btn" type="button">Begin Test</button>
         </div>
       </div>
 
 <!-- well for interviewer questions -->
       <div id="interviewer-question-well" class="well">
         <h3>I'm gonna ask you a series of questions. Just relax and answer them as simply as you can...</h3>
-        <h4 id="question-text-field">You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?</h4>
+        <h4 id="question-text-field"></h4>
+      </div>
+
+<!-- well for player round win -->
+      <div id="player-win-round-well" class="well">
+        <h3>You win the round!</h3>
+        <h4>Keep up the good work, you're that much closer to freedom.</h4>
+      </div>
+
+<!-- well for player round lose -->
+      <div id="player-lose-round-well" class="well">
+        <h3>You lose the round!</h3>
+        <h4>The interviewer is getting suspicious...</h4>
       </div>
 
 <!-- well for player win -->
-      <div id="player-win-well" class="well">
+      <div id="player-win-game-well" class="well">
         <h3>You Win!</h3>
         <h4>You have convinced the interviewer that you are not a replicant. You are free to commit heinus acts of mayhem across the city.</h4>
-        <button type="button" name="reset" class="play-again">Play Again</button>
+        <buttontype="button" name="reset" class="btn play-again">Play Again</button>
       </div>
 
 <!-- well for player lose -->
-      <div id="player-lose-well" class="well">
+      <div id="player-lose-game-well" class="well">
         <h3>You Lose!</h3>
         <h4>The interviewer has figured out that you're a replicant! Before you have time to run, he shoots you with his laser, right in your android face.</h4>
-        <button type="button" name="reset" class="play-again">Play Again</button>
+        <button type="button" name="reset" class="btn play-again">Play Again</button>
       </div>
 
-<!-- ROW for all VK questions -->
-      <div id="user-input-row" class="row">
-        <form id="user-input-form">
-<!-- COLUMN for "feeling" VK questions -->
-          <div id="feeling-answer-group" class="col-md-4 green-background yellow-background">
-            <h4>Feeling</h4>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="anger">Anger
-              </label>
+
+    <form id="user-input-form">
+
+        <!--Feeling  -->
+        <div class="row">
+
+
+        <div class="col-sm-6">
+          <h3 class="label-center feelingLabel">Feeling</h3>
+          <div class="col-sm-12">
+            <div class="radio feeling-answer-group label-center">
+                <input type="radio" name="feeling-group" value="anger" id="anger">
+                <label for="anger" id="angerLabel">Anger</label>
             </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="anxiety">Anxiety
-              </label>
+            <div class="row">
+              <div class="col-sm-3 zero">
+                <div class="radio feeling-answer-group sides">
+                    <input type="radio" name="feeling-group" value="fear" id="fear">
+                    <label id="fearLabel" for="fear">Fear</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="full-penagon">
+                  <div id="triangle-top-left" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-top-right" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-bottom" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-bottom-left" class="feeling-triangle">
+                  </div>
+                  <div id="triangle-bottom-right" class="feeling-triangle">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 zero">
+                <div class="radio feeling-answer-group sides">
+                    <input type="radio" name="feeling-group" value="anxiety" id="anxiety">
+                    <label id="anxietyLabel" for="anxiety">Anxiety</label>
+                </div>
+              </div>
             </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="disgust">Disgust
-              </label>
-            </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="sadness">Sadness
-              </label>
-            </div>
-            <div class="radio feeling-answer-group">
-              <label>
-                <input type="radio" name="feeling-group" value="fear">Fear
-              </label>
-            </div>
-          </div>
-<!-- COLUMN for "tone" VK questions -->
-          <div id="tone-answer-group" class="col-md-4">
-            <h4>Tone</h4>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="distant">Distant
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="worried">Worried
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="rude">Rude
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="agitated">Agitated
-              </label>
-            </div>
-            <div class="radio tone-answer-group">
-              <label>
-                <input type="radio" name="tone-group" value="unsure">Unsure
-              </label>
-            </div>
-          </div>
-<!--COLUMN for "intesity" VK questions -->
-          <div id="intensity-answer-group" class="col-md-4">
-            <h4>Intensity</h4>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="animated">Animated
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="focused">Focused
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="subdued">Subdued
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="reserved">Reserved
-              </label>
-            </div>
-            <div class="radio intensity-answer-group">
-              <label>
-                <input type="radio" name="intensity-group" value="distracted">Distracted
-              </label>
+            <div class="row">
+              <div class="col-sm-2">
+
+              </div>
+              <div class="col-sm-8">
+                <div class="col-sm-3 sadness">
+                  <div class="radio feeling-answer-group">
+                      <input type="radio" name="feeling-group" value="sadness" id="sadness">
+                      <label for="sadness">Sadness</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-3">
+                  <div class="radio feeling-answer-group">
+                      <input type="radio" name="feeling-group" value="disgust" id="disgust">
+                      <label id="disgustLabel" for="disgust">Disgust</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-2">
+
+              </div>
             </div>
           </div>
-          <div class="submit-button">
-            <button class="btn" type="submit">Submit your answers</button>
+        </div>
+
+        <!--Tone  -->
+        <div class="col-md-6">
+          <h3 class="label-center toneLabel">Tone</h3>
+          <div class="col-md-12">
+            <div class="radio tone-answer-group label-center">
+                <input type="radio" name="tone-group" value="distant" id="distant">
+                <label id="distantLabel" for="distant">Distant</label>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="radio tone-answer-group sides">
+                    <input type="radio" name="tone-group" value="unsure" id="unsure">
+                    <label id="unsureLabel" for="unsure">Unsure</label>
+                </div>
+              </div>
+              <div class="col-md-6" class="zero">
+                <div class="full-penagon">
+                  <div id="triangle-top-left">
+                  </div>
+                  <div id="triangle-top-right">
+                  </div>
+                  <div id="triangle-bottom">
+                  </div>
+                  <div id="triangle-bottom-left">
+                  </div>
+                  <div id="triangle-bottom-right">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3" class="zero">
+                <div class="radio tone-answer-group sides">
+                    <input type="radio" name="tone-group" value="worried" id="worried">
+                    <label for="worried" id="worriedLabel">Worried</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+
+              </div>
+              <div class="col-md-8">
+                <div class="col-md-3">
+                  <div class="radio tone-answer-group">
+                      <input type="radio" name="tone-group" value="agitated" id="agitated">
+                      <label for="agitated">Agitated</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-3">
+                  <div class="radio tone-answer-group">
+                    <input type="radio" name="tone-group" value="rude" id="rude">
+                      <label id="rudeLabel" for="rude">Rude</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+
+              </div>
+            </div>
           </div>
-        </form>
+        </div>
+
+        <!--Intensity  -->
+        <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <h3 class="label-center intensityLabel">Intensity</h3>
+          <div class="col-md-12">
+            <div class="radio intensity-answer-group label-center">
+                <input type="radio" name="intensity-group" value="animated" id="animated">
+                <label id="animatedLabel" for="animated">Animated</label>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="radio intensity-answer-group sides">
+                    <input type="radio" name="intensity-group" value="distracted" id="distracted">
+                    <label id="distractedLabel" for="distracted">Distracted</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="full-penagon">
+                  <div id="triangle-top-left">
+                  </div>
+                  <div id="triangle-top-right">
+                  </div>
+                  <div id="triangle-bottom">
+                  </div>
+                  <div id="triangle-bottom-left">
+                  </div>
+                  <div id="triangle-bottom-right">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="radio intensity-answer-group sides">
+                    <input type="radio" name="intensity-group" value="focused" id="focused">
+                    <label id="focusedLabel" for="focused">Focused</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+
+              </div>
+              <div class="col-md-8">
+                <div class="col-md-3">
+                  <div class="radio intensity-answer-group">
+                      <input type="radio" name="intensity-group" value="reserved" id="reserved">
+                      <label id="reservedLabel" for="reserved">Reserved</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-3">
+                  <div class="radio intensity-answer-group">
+                      <input type="radio" name="intensity-group" value="subdued" id="subdued">
+                      <label id="subduedLabel" for="subdued">Subdued</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-<!-- end of ROW for all VK questions -->
+      <div class="submit-button">
+        <button class="btn" type="submit">Submit your answers</button>
+      </div>
+    </form>
+
 
       <div id="answer-well-easy" class="well">
         <h3>easy mode</h3>
-        <h4 class="suspicion">Suspicion:<span class="round-suspicion"></span></h4>
-        <h4 class="suspicion">Total Suspicion:<span class="total-suspicion"></span></h4>
+        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
+        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
         <h4>Feeling Color: <span class="color-feeling"></span></h4>
         <h4>Tone Color: <span class="color-tone"></span></h4>
         <h4>Intensity Color: <span class="color-intensity"></span></h4>
       </div>
       <div id="answer-well-medium" class="well">
         <h2>Medium Mode</h2>
-        <h4 class="suspicion">Suspicion:<span class="round-suspicion"></span></h4>
-        <h4 class="suspicion">Total Suspicion:<span class="total-suspicion"></span></h4>
+        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
+        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
         <h4>Colors:</h4>
         <h4><span class="color-intensity"></span> <span class="color-feeling"></span> <span class="color-tone"></span>
       </div>
       <div id="answer-well-hard" class="well">
         <h1>HARD MODE</h1>
-        <h4 class="suspicion">Suspicion:<span class="round-suspicion"></span></h4>
-        <h4 class="suspicion">Total Suspicion:<span class="total-suspicion"></span></h4>
+        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
+        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
       </div>
+
     </div>
   </body>
 </html>
