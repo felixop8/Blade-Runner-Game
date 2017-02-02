@@ -5,33 +5,33 @@
 
 ## Description
 
-_This website application is meant as demonstration of the manipulation of objects using constructors and prototypes. It also include the uses of loops and arrays. It has been created to cover the weekly Epicodus code review of the fourth week of the intro course._
+_A near-perfect android copy of a human being, built for slave labor.  You have escaped from captivity and are attempting to pass as a human.  There is only one thing that can give you away: your emotions.  Android systems can't perfectly copy human emotional responses.  Humans use an empathy response examinaiton, the Voight Kampff test, to identify replicants._
 
 ## Specifications
 
 
 * #### Behavior: User begins play and receives a question.
 
-    * _Input Example: click start game._
+    * _Input Example: click begin game._
 
     * _Example Output: display first question._
 
 
-* #### User selects the three parts of their response and submits an answer for scoring, receives score and prompt for next answer.
+* #### Behavior: User selects the three parts of their response and submits an answer for scoring, receives score and prompt for next answer.
 
     * _Input Example: selects (Anger,Distracted,Agitated)._
 
     * _Example Output: Score (suspicion4, yellow, green, yellow)._
 
 
-* #### User selects the correct answer and wins the game.
+* #### Behavior: User selects the correct answer and wins the game.
 
     * _Input Example: (correct set of three answers)._
 
     * _Example Output: wins game._
 
 
-* #### When the user reaches 20 suspicion, the game ends.
+* #### Behavior: When the user reaches 20 suspicion, the game ends.
 
     * _Input Example: incorrect answer reaching 20 suspicion4._
 
@@ -47,7 +47,11 @@ _No known bugs._
 
 ## Support and contact details
 
-_Please direct questions  to the author felixop8@gmail.com_
+_Please direct questions to any of these people:
+felixop8@gmail.com
+seanpeterson11@gmail.com
+brendangrubb@gmail.com
+zach.j.swanson.com_
 
 ## Technologies Used
 
@@ -57,16 +61,15 @@ _Written in HTML, CSS and JavaScript with the help of Jquery and Bootstrap._
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key][emojis]):
+Thanks goes to these wonderful people:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src=img/felix.jpg width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) | [<img src="img/zach.jpg" width="100px;"/><br /><sub>Zach Awanson</sub>](https://github.com/zjswanson) | [<img src="img/sean.jpg" width="100px;"/><br /><sub>Sean Peterson</sub>](https://github.com/Sean-Peterson)| [<img src="img/brendan.jpg" width="100px;"/><br /><sub>Brendan Grubb</sub>](https://github.com/Brendangrubb) |
 | :---: | :---: | :---: | :---: |
 
 
 ## License
 
-_Copyright (c) 2017 **Felix Oporto**_
+_Copyright (c) 2017 **Felix Oporto, Zach Swanson, Sean Peterson, Brendan Grubb**_
 
 _Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
