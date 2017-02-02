@@ -1,3 +1,26 @@
+
+header {
+  border: 2px solid #c00202;
+  background-image: url('https://media.giphy.com/media/Gvddc5m1StsC4/giphy.gif');
+  background-position: right;
+  background-repeat: no-repeat;
+  font-family: blade-runner;
+  background-color: #080c1c;
+  color: #c00202;
+  padding: 2px;
+  padding-left: 30px;
+  margin-top: 20px;
+  border-radius: 500px;
+}
+
+body {
+  background: url('https://timedoctor.org/wp/wp-content/uploads/2015/06/cyberpunk-background.png') no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
 #interviewer-question-well {
   display: none;
 }
@@ -5,6 +28,7 @@
 #user-input-row {
   display: none;
 }
+
 .label-center {
   text-align: center;
 }
@@ -35,22 +59,27 @@
   padding-left: 0px;
   padding-right:100px;
 }
+
 #rudeLabel {
   padding-left: 0px;
   padding-right:100px;
 }
+
 #focusedLabel {
   padding-left: 0px;
   padding-right:100px;
 }
+
 #subduedLabel {
   padding-left: 0px;
   padding-right:100px;
 }
+
 #disgustLabel {
   padding-left: 0px;
   padding-right:100px;
 }
+
 #anxietyLabel {
   padding-left: 0px;
   padding-right:100px;
@@ -85,57 +114,150 @@
 }
 
 /* Pentagon*/
-#triangle-bottom {
+.triangle-bottom {
   	width: 0;
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 100px solid orange;
+	border-bottom: 100px solid white;
   margin-left: 50px;
 }
 
-#triangle-bottom-right {
+.triangle-bottom-right {
 	width: 0;
 	height: 0;
   margin-left: 100px;
   margin-top: -100px;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 100px solid green;
+	border-top: 100px solid white;
 }
 
-#triangle-bottom-left {
+.triangle-bottom-left {
 	width: 0;
 	height: 0;
   margin-left: -100;
   margin-top: -100px;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 100px solid blue;
+	border-top: 100px solid white;
 }
 
-#triangle-top-right {
+.triangle-top-right {
 	width: 0;
 	height: 0;
-	border-bottom: 100px solid red;
+	border-bottom: 100px solid white;
 	border-right: 100px solid transparent;
   margin-left: 100px;
 }
 
-#triangle-top-left {
+.triangle-top-left {
   float: left;
 	width: 0;
 	height: 0;
-	border-bottom: 100px solid pink;
+	border-bottom: 100px solid white;
   border-left: 100px solid transparent;
 }
 
-body {
-  background: url('https://timedoctor.org/wp/wp-content/uploads/2015/06/cyberpunk-background.png') no-repeat center center fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+.triangle-bottom-green {
+  animation: bottom-green 4s infinite;
+}
+
+@keyframes bottom-green {
+  0% {
+    border-bottom: 100px solid white;
+  }
+  65% {
+    border-bottom: 100px solid green;
+  }
+  100% {
+    border-bottom: 100px solid white;
+  }
+
+}
+
+.triangle-bottom-yellow {
+  animation: bottom-yellow 4s infinite;
+}
+
+@keyframes bottom-yellow {
+  0% {
+    border-bottom: 100px solid white;
+  }
+  65% {
+    border-bottom: 100px solid yellow;
+  }
+  100% {
+    border-bottom: 100px solid white;
+  }
+}
+
+.triangle-bottom-red {
+  animation: bottom-red 4s infinite;
+}
+
+@keyframes bottom-red {
+  0% {
+    border-bottom: 100px solid white;
+  }
+  65% {
+    border-bottom: 100px solid red;
+  }
+  100% {
+    border-bottom: 100px solid white;
+  }
+
+}
+
+.triangle-top-green {
+  animation: top-green 4s infinite;
+}
+
+@keyframes top-green {
+  0% {
+    border-top: 100px solid white;
+  }
+  65% {
+    border-top: 100px solid green;
+  }
+  100% {
+    border-top: 100px solid white;
+  }
+
+}
+
+.triangle-top-yellow {
+  animation: top-yellow 4s infinite;
+}
+
+@keyframes top-yellow {
+  0% {
+    border-top: 100px solid white;
+  }
+  65% {
+    border-top: 100px solid yellow;
+  }
+  100% {
+    border-top: 100px solid white;
+  }
+
+}
+
+.triangle-top-red {
+  animation: top-red 4s infinite;
+}
+
+@keyframes top-red {
+  0% {
+    border-top: 100px solid white;
+  }
+  65% {
+    border-top: 100px solid red;
+  }
+  100% {
+    border-top: 100px solid white;
+  }
+
 }
 
 input {
@@ -146,72 +268,8 @@ input:checked + label {
     color: red;
 }
 
-header {
-  border: 2px solid #c00202;
-  background-image: url('https://media.giphy.com/media/Gvddc5m1StsC4/giphy.gif');
-  background-position: right;
-  background-repeat: no-repeat;
+.jumbotron {
   font-family: blade-runner;
-  background-color: #080c1c;
-  color: #c00202;
-  padding: 2px;
-  padding-left: 30px;
-  margin-top: 20px;
-  border-radius: 500px;
-
-}
-
-.pulse-green {
-  animation: green 4s infinite;
-}
-
-@keyframes green {
-  0% {
-    background-color: white;
-  }
-  65% {
-    background-color: #91E778;
-    opacity: 0.6;
-  }
-  100% {
-    background-color: white;
-  }
-}
-
-.pulse-yellow {
-  animation: yellow 4s infinite;
-
-}
-
-@keyframes yellow {
-  0% {
-    background-color: white;
-  }
-  65% {
-    background-color: #F9E597;
-    opacity: 0.6;
-  }
-  100% {
-    background-color: white;
-  }
-}
-
-.pulse-red {
-  animation: red 4s infinite;
-
-}
-
-@keyframes red {
-  0% {
-    background-color: white;
-  }
-  65% {
-    background-color: #8D3A38;
-    opacity: 0.6;
-  }
-  100% {
-    background-color: white;
-  }
 }
 
 .difficulty-buttons {
@@ -232,7 +290,6 @@ header {
 #answer-well{
   display: none;
 }
-
 
 #categories{
   text-align: center;
@@ -277,7 +334,6 @@ header {
   border-radius: 50px;
   margin-top: 30px;
   background-color: rgba(201, 212, 226, 0.7);
-
 }
 
 #restart-game {
