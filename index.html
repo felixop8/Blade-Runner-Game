@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
     <style>@font-face { font-family: blade-runner; src: url("fonts/blade-runner.ttf")}</style>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:600|Roboto" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Replicant Mastermind</title>
@@ -20,13 +21,13 @@
       <div id="initiate-game" class="well">
         <div class="difficulty">
           <div class="col-md-4">
-            <button class="btn" type="button" name="easy" id="easy-button">easy</button>
+            <button class="btn" type="button" name="easy" id="easy-button">Easy</button>
           </div>
           <div class="col-md-4">
             <button class="btn" type="button" name="medium" id="medium-button">Medium</button>
           </div>
           <div class="col-md-4">
-            <button class="btn" type="button" name="hard" id="hard-button">HARD</button>
+            <button class="btn" type="button" name="hard" id="hard-button">Hard</button>
           </div>
         </div>
         <div id="new-game-button">
@@ -74,7 +75,7 @@
 
 
         <div class="col-sm-6">
-          <h3 class="label-center feelingLabel">Feeling</h3>
+          <h3 id="feeling-group-label" class="label-center feelingLabel">Feeling</h3>
           <div class="col-sm-12">
             <div class="radio feeling-answer-group label-center">
                 <input type="radio" name="feeling-group" value="anger" id="anger">
@@ -116,7 +117,7 @@
                 <div class="col-sm-3 sadness">
                   <div class="radio feeling-answer-group">
                       <input type="radio" name="feeling-group" value="sadness" id="sadness">
-                      <label for="sadness">Sadness</label>
+                      <label id="sadnessLabel" for="sadness">Sadness</label>
                   </div>
                 </div>
                 <div class="col-sm-6">
@@ -138,7 +139,7 @@
 
         <!--Tone  -->
         <div class="col-md-6">
-          <h3 class="label-center toneLabel">Tone</h3>
+          <h3 id="tone-group-label" class="label-center toneLabel">Tone</h3>
           <div class="col-md-12">
             <div class="radio tone-answer-group label-center">
                 <input type="radio" name="tone-group" value="distant" id="distant">
@@ -180,7 +181,7 @@
                 <div class="col-md-3">
                   <div class="radio tone-answer-group">
                       <input type="radio" name="tone-group" value="agitated" id="agitated">
-                      <label for="agitated">Agitated</label>
+                      <label id="agitatedLabel" for="agitated">Agitated</label>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -203,10 +204,15 @@
         <!--Intensity  -->
         <div class="row">
         <div class="col-md-3">
+          <div id="tutorial-reset" class="well">
 
+            <div class="reset-button">
+              <button type="button" name="reset" id="restart-game" class="btn  play-again">Restart Test</button>
+            </div>
+          </div>
         </div>
         <div class="col-md-6">
-          <h3 class="label-center intensityLabel">Intensity</h3>
+          <h3 id="intensity-group-label" class="label-center intensityLabel">Intensity</h3>
           <div class="col-md-12">
             <div class="radio intensity-answer-group label-center">
                 <input type="radio" name="intensity-group" value="animated" id="animated">
@@ -276,8 +282,8 @@
 
         </div>
       </div>
-      <div class="submit-button">
-        <button class="btn" type="submit">Submit your answers</button>
+      <div class="well submit-button">
+        <button class="btn"  id="submit-answer-button" type="submit">Submit your answers</button>
       </div>
     </form>
 

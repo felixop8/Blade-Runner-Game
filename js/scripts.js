@@ -138,7 +138,9 @@ Game.prototype.playDisplay = function(play) {
   if (this.difficulty === "easy"){
     colorTriangles(play.feelingColor,play.toneColor,play.intensityColor);
   } else if (this.difficulty === "medium") {
-
+    var colorArray =[play.feelingColor,play.toneColor,play.intensityColor];
+    colorArray = randomizeArray(colorArray);
+    colorTriangles(colorArray[0],colorArray[1],colorArray[2]);
   }
   var turncounter = this.turnCounter;
   var roundcounter = this.wins + this.losses;
@@ -204,17 +206,24 @@ $(document).ready(function(){
   });
 
   $("#easy-button").click(function(){
-    // game.difficulty =
+    globalGame.difficulty = "easy";
 
   });
   $("#medium-button").click(function(){
-    // game.difficulty =
-
+    globalGame.difficulty = "medium";
   });
   $("#hard-button").click(function(){
-    // game.difficulty =
+    globalGame.difficulty = "hard";
 
   });
+
+  $("#showTutorial").click(function(){
+    console.log("hello");
+    $("#tutorial").toggle();
+    $("#tutorial").addClass("tutorial-visible");
+
+  });
+
 
   $("#showTutorial").click(function(){
     console.log("hello");
@@ -239,6 +248,7 @@ $(document).ready(function(){
     $("#restart-game").show();
     $(".submit-button").show();
     $("#answer-well").show();
+    $("#tutorial-reset").show();
     $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
   });
 
