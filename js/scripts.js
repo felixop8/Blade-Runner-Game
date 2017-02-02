@@ -224,6 +224,7 @@ $(document).ready(function(){
     $("#restart-game").show();
     $(".submit-button").show();
     $("#answer-well").show();
+    $("#tutorial-reset").show();
     $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
   });
 

@@ -1,12 +1,12 @@
 
 header {
-  border: 2px solid #c00202;
+  border: 2px solid #BD2C78;
   background-image: url('https://media.giphy.com/media/Gvddc5m1StsC4/giphy.gif');
   background-position: right;
   background-repeat: no-repeat;
   font-family: blade-runner;
   background-color: #080c1c;
-  color: #c00202;
+  color: #BD2C78;
   padding: 2px;
   padding-left: 30px;
   margin-top: 20px;
@@ -19,10 +19,19 @@ body {
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
+   font-family: 'Dosis', sans-serif;
+}
+
+button {
+  background-color: rgba(189, 44, 120, 0.7);
 }
 
 #interviewer-question-well {
   display: none;
+  min-width: 1140px;
+  min-height: 165px;
+
+
 }
 
 #user-input-row {
@@ -55,62 +64,125 @@ body {
   padding-right: 0px;
 }
 
+.tone-answer-group {
+  font-family: 'Roboto', sans-serif;
+}
+
+.feeling-answer-group {
+  font-family: 'Roboto', sans-serif;
+}
+
+.intensity-answer-group {
+  font-family: 'Roboto', sans-serif;
+}
+
 #worriedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 0px;
   padding-right:100px;
 }
 
 #rudeLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 0px;
   padding-right:100px;
 }
 
 #focusedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 0px;
   padding-right:100px;
 }
 
 #subduedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 0px;
   padding-right:100px;
 }
 
 #disgustLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 0px;
   padding-right:100px;
 }
 
 #anxietyLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 0px;
   padding-right:100px;
 }
 
 #reservedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 30px;
 }
 
 #distractedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 50px;
 }
 
 #fearLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 85px;
 }
 
 #unsureLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 75px;
 }
 
 #angerLabel {
-  padding-left: 10px;
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
+  padding-left: 9px;
 }
 
 #animatedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 10px;
 }
 
 #distantLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
   padding-left: 10px;
+}
+
+#sadnessLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75);
+}
+
+#agitatedLabel {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75)
+}
+
+#feeling-group-label {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75)
+}
+
+#tone-group-label {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75)
+}
+
+#intensity-group-label {
+  font-weight: bolder;
+  color: rgba(240, 233, 237, 0.75)
 }
 
 /* Pentagon*/
@@ -119,7 +191,7 @@ body {
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-bottom: 100px solid white;
+	border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   margin-left: 50px;
 }
 
@@ -130,7 +202,7 @@ body {
   margin-top: -100px;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 100px solid white;
+	border-top: 100px solid rgba(214, 190, 202, 0.65);
 }
 
 .triangle-bottom-left {
@@ -140,13 +212,13 @@ body {
   margin-top: -100px;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
-	border-top: 100px solid white;
+	border-top: 100px solid rgba(214, 190, 202, 0.65);
 }
 
 .triangle-top-right {
 	width: 0;
 	height: 0;
-	border-bottom: 100px solid white;
+	border-bottom: 100px solid rgba(214, 190, 202, 0.65);
 	border-right: 100px solid transparent;
   margin-left: 100px;
 }
@@ -155,7 +227,7 @@ body {
   float: left;
 	width: 0;
 	height: 0;
-	border-bottom: 100px solid white;
+	border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   border-left: 100px solid transparent;
 }
 
@@ -165,13 +237,14 @@ body {
 
 @keyframes bottom-green {
   0% {
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   }
+  /*green*/
   65% {
-    border-bottom: 100px solid green;
+    border-bottom: 100px solid rgba(44, 189, 114, 0.65);
   }
   100% {
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   }
 
 }
@@ -182,13 +255,14 @@ body {
 
 @keyframes bottom-yellow {
   0% {
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   }
+  /*yellow*/
   65% {
-    border-bottom: 100px solid yellow;
+    border-bottom: 100px solid rgba(189, 186, 44, .65);
   }
   100% {
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   }
 }
 
@@ -198,13 +272,14 @@ body {
 
 @keyframes bottom-red {
   0% {
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   }
+  /*red*/
   65% {
-    border-bottom: 100px solid red;
+    border-bottom: 100px solid rgba(118, 27, 37, 0.65);
   }
   100% {
-    border-bottom: 100px solid white;
+    border-bottom: 100px solid rgba(214, 190, 202, 0.65);
   }
 
 }
@@ -215,13 +290,14 @@ body {
 
 @keyframes top-green {
   0% {
-    border-top: 100px solid white;
+    border-top: 100px solid rgba(214, 190, 202, 0.65);
   }
+  /*green*/
   65% {
-    border-top: 100px solid green;
+    border-top: 100px solid rgba(44, 189, 114, 0.65);
   }
   100% {
-    border-top: 100px solid white;
+    border-top: 100px solid rgba(214, 190, 202, 0.65);
   }
 
 }
@@ -232,13 +308,14 @@ body {
 
 @keyframes top-yellow {
   0% {
-    border-top: 100px solid white;
+    border-top: 100px solid rgba(214, 190, 202, 0.65);
   }
+  /*yellow*/
   65% {
-    border-top: 100px solid yellow;
+    border-top: 100px solid rgba(189, 186, 44, .65);
   }
   100% {
-    border-top: 100px solid white;
+    border-top: 100px solid rgba(214, 190, 202, 0.65);
   }
 
 }
@@ -249,24 +326,19 @@ body {
 
 @keyframes top-red {
   0% {
-    border-top: 100px solid white;
+    border-top: 100px solid rgba(214, 190, 202, 0.65);
   }
+  /*red*/
   65% {
-    border-top: 100px solid red;
+    border-top: 100px solid rgba(118, 27, 37, 0.65);
   }
   100% {
-    border-top: 100px solid white;
+    border-top: 100px solid rgba(214, 190, 202, 0.65);
   }
 
 }
 
-input {
-    visibility:hidden;
-}
 
-input:checked + label {
-    color: red;
-}
 
 .jumbotron {
   font-family: blade-runner;
@@ -274,12 +346,15 @@ input:checked + label {
 
 .difficulty-buttons {
   margin-bottom: 30px;
+
 }
 
 .submit-button {
+  border-radius: 30px;
   display: none;
   text-align: center;
-  padding-top: 70px;
+  padding: 5px;
+  padding-left: 5px;
 }
 
 .difficulty{
@@ -287,7 +362,15 @@ input:checked + label {
   text-align: center;
 }
 
+#tutorial-reset {
+  margin-top: 125px;
+  display: none;
+  padding-bottom: 80px;
+}
+
+
 #answer-well{
+  margin-top: 125px;
   display: none;
 }
 
@@ -330,23 +413,47 @@ input:checked + label {
 }
 
 .well {
-  border: 2px solid #c00202;
+  border: 2px solid #BD2C78;
   border-radius: 50px;
   margin-top: 30px;
-  background-color: rgba(201, 212, 226, 0.7);
+  background-color: rgba(214, 190, 202, 0.65);
 }
 
 #restart-game {
   display: none;
   margin-top: 25px;
-  min-width: 250px;
+  min-width: 200px;
+  min-height: 75px;
+  border-radius: 30px;
+}
+
+#submit-answer-button {
+  min-width: 100%;
+  min-height: 80px;
+  border-radius: 50px;
+}
+
+#submit-answer-button:focus {
+  outline:0;
 }
 
 .reset-button {
   text-align: center;
+  border-radius: 30px;
 }
 
 #initiate-game {
   margin: 30px auto;
-  max-width: 900px;
+  width: 1140px;
+  padding-bottom: 56px;
+  border-radius: 50px;
+
+}
+
+input {
+    visibility:hidden;
+}
+
+input:checked + label {
+    /*background-color: black;*/
 }
