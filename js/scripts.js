@@ -224,6 +224,14 @@ $(document).ready(function(){
 
   });
 
+
+  $("#showTutorial").click(function(){
+    console.log("hello");
+    $("#tutorial").toggle();
+    $("#tutorial").addClass("tutorial-visible");
+
+  });
+
   $("#hideTutorial").click(function(){
     console.log("hello");
     $("#tutorial").toggle();
