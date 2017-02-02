@@ -21,6 +21,23 @@ body {
    background-size: cover;
 }
 
+#tutorial {
+  display: none;
+}
+.tutorial-visible {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border: 1px solid pink;
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+
+
 #interviewer-question-well {
   display: none;
 }
@@ -349,4 +366,9 @@ input:checked + label {
 #initiate-game {
   margin: 30px auto;
   max-width: 900px;
+}
+
+.tutorial-btn {
+  padding: 20px;
+  text-align: center;
 }
