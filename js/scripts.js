@@ -217,6 +217,22 @@ $(document).ready(function(){
 
   });
 
+  $("#showTutorial").click(function(){
+    console.log("hello");
+    $("#tutorial").toggle();
+    $("#tutorial").addClass("tutorial-visible");
+
+  });
+
+  $("#hideTutorial").click(function(){
+    console.log("hello");
+    $("#tutorial").toggle();
+
+  });
+
+  
+
+
   $("#new-game-button").click(function() {
     $("#initiate-game").hide();
     $("#interviewer-question-well").show();

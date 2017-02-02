@@ -26,6 +26,23 @@ button {
   background-color: rgba(189, 44, 120, 0.7);
 }
 
+#tutorial {
+  display: none;
+}
+.tutorial-visible {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border: 1px solid pink;
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+
+
 #interviewer-question-well {
   display: none;
   min-width: 1140px;
@@ -456,4 +473,9 @@ input {
 
 input:checked + label {
     /*background-color: black;*/
+}
+
+.tutorial-btn {
+  padding: 20px;
+  text-align: center;
 }
