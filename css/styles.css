@@ -259,7 +259,7 @@ input:checked + label {
 
 #new-game-button {
   text-align: center;
-};
+}
 
 .well {
   border-radius: 50px;
