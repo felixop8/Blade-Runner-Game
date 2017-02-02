@@ -60,8 +60,8 @@ _Written in HTML, CSS and JavaScript with the help of Jquery and Bootstrap._
 Thanks goes to these wonderful people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src=img/felix.jpg width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) | [<img src="img/zach" width="100px;"/><br /><sub>Zach Awanson</sub>](https://github.com/zjswanson) | [<img src="img/sean" width="100px;"/><br /><sub>Sean Peterson</sub>](https://github.com/Sean-Peterson)| [<img src="img/brendan.jpg" width="100px;"/><br /><sub>Brendan Grubb</sub>](https://github.com/Brendangrubb) |
-| :---: | :---: | :---: | :---: | 
+| [<img src=img/felix.jpg width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) | [<img src="img/zach.jpg" width="100px;"/><br /><sub>Zach Awanson</sub>](https://github.com/zjswanson) | [<img src="img/sean.jpg" width="100px;"/><br /><sub>Sean Peterson</sub>](https://github.com/Sean-Peterson)| [<img src="img/brendan.jpg" width="100px;"/><br /><sub>Brendan Grubb</sub>](https://github.com/Brendangrubb) |
+| :---: | :---: | :---: | :---: |
 
 
 ## License
