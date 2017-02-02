@@ -140,6 +140,7 @@ Game.prototype.playDisplay = function(play) {
   $('.color-feeling').text(play.feelingColor);
   $('.color-tone').text(play.toneColor);
   $('.color-intensity').text(play.intensityColor);
+
   var turncounter = this.turnCounter;
   var roundcounter = this.wins + this.losses;
   $("#question-text-field").text(globalGame.questions[roundcounter]["questionsText"][turncounter]);
