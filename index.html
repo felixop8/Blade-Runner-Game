@@ -10,11 +10,11 @@
   </head>
   <body>
     <div class="container">
-
-      <div class="jumbotron">
+      <header>
         <h1>replicant mastermind</h1>
         <h3>a game based on blade runner's voight-kampff test</h3>
-      </div>
+      </header>
+
 
 <!-- well for game initiation -->
       <div id="initiate-game" class="well">
@@ -267,33 +267,25 @@
             </div>
           </div>
         </div>
+        <div class="col-md-3">
+          <div id="answer-well" class="well">
+            <h1>Game Stats</h1>
+            <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
+            <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
+          </div>
+
+        </div>
       </div>
       <div class="submit-button">
         <button class="btn" type="submit">Submit your answers</button>
       </div>
     </form>
 
+    <div class="reset-button">
+      <button type="button" name="reset" id="restart-game" class="btn  play-again">Restart Test</button>
+    </div>
 
-      <div id="answer-well-easy" class="well">
-        <h3>easy mode</h3>
-        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
-        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
-        <h4>Feeling Color: <span class="color-feeling"></span></h4>
-        <h4>Tone Color: <span class="color-tone"></span></h4>
-        <h4>Intensity Color: <span class="color-intensity"></span></h4>
-      </div>
-      <div id="answer-well-medium" class="well">
-        <h2>Medium Mode</h2>
-        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
-        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
-        <h4>Colors:</h4>
-        <h4><span class="color-intensity"></span> <span class="color-feeling"></span> <span class="color-tone"></span>
-      </div>
-      <div id="answer-well-hard" class="well">
-        <h1>HARD MODE</h1>
-        <h4 class="suspicion">Turn Suspicion:<span class="turn-suspicion"></span></h4>
-        <h4 class="suspicion">Round Suspicion:<span class="round-suspicion"></span></h4>
-      </div>
+
 
     </div>
   </body>

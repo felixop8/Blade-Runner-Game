@@ -130,6 +130,13 @@
   border-left: 100px solid transparent;
 }
 
+body {
+  background: url('https://timedoctor.org/wp/wp-content/uploads/2015/06/cyberpunk-background.png') no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
 
 input {
     visibility:hidden;
@@ -139,8 +146,19 @@ input:checked + label {
     color: red;
 }
 
-.jumbotron {
+header {
+  border: 2px solid #c00202;
+  background-image: url('https://media.giphy.com/media/Gvddc5m1StsC4/giphy.gif');
+  background-position: right;
+  background-repeat: no-repeat;
   font-family: blade-runner;
+  background-color: #080c1c;
+  color: #c00202;
+  padding: 2px;
+  padding-left: 30px;
+  margin-top: 20px;
+  border-radius: 500px;
+
 }
 
 .pulse-green {
@@ -201,6 +219,7 @@ input:checked + label {
 }
 
 .submit-button {
+  display: none;
   text-align: center;
   padding-top: 70px;
 }
@@ -210,15 +229,7 @@ input:checked + label {
   text-align: center;
 }
 
-#answer-well-easy{
-  display: none;
-}
-
-#answer-well-medium{
-  display: none;
-}
-
-#answer-well-hard{
+#answer-well{
   display: none;
 }
 
@@ -262,5 +273,24 @@ input:checked + label {
 }
 
 .well {
+  border: 2px solid #c00202;
   border-radius: 50px;
+  margin-top: 30px;
+  background-color: rgba(201, 212, 226, 0.7);
+
+}
+
+#restart-game {
+  display: none;
+  margin-top: 25px;
+  min-width: 250px;
+}
+
+.reset-button {
+  text-align: center;
+}
+
+#initiate-game {
+  margin: 30px auto;
+  max-width: 900px;
 }

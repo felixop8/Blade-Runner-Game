@@ -166,31 +166,31 @@ $(document).ready(function(){
   });
 
   $("#easy-button").click(function(){
-    $("#answer-well-easy").show();
-    $("#answer-well-medium").hide();
-    $("#answer-well-hard").hide();
+    // game.difficulty =
+
   });
   $("#medium-button").click(function(){
-    $("#answer-well-easy").hide();
-    $("#answer-well-medium").show();
-    $("#answer-well-hard").hide();
+    // game.difficulty =
+
   });
   $("#hard-button").click(function(){
-    $("#answer-well-easy").hide();
-    $("#answer-well-medium").hide();
-    $("#answer-well-hard").show();
+    // game.difficulty =
+
   });
 
   $("#new-game-button").click(function() {
     $("#initiate-game").hide();
     $("#interviewer-question-well").show();
     $("#user-input-row").show();
-    $("#answer-well-easy").show();
+    $("#restart-game").show();
+    $(".submit-button").show();
+    $("#answer-well").show();
     $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
   });
 
   $('.play-again').click(function() {
     location.reload();
   });
+
 
 });
