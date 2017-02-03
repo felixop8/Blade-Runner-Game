@@ -50,10 +50,10 @@ _No known bugs._
 ## Support and contact details
 
 Please direct questions  to the authors:
-felixop8@gmail.com
-https://github.com/zjswanson
-https://github.com/Sean-Peterson
-https://github.com/Brendangrubb
+  * felixop8@gmail.com
+  * https://github.com/zjswanson
+  * https://github.com/Sean-Peterson
+  * https://github.com/Brendangrubb
 
 ## Technologies Used
 
