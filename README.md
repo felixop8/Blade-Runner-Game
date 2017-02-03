@@ -5,7 +5,9 @@
 
 ## Description
 
-_This website application is meant as demonstration of the manipulation of objects using constructors and prototypes. It also include the uses of loops and arrays. It has been created to cover the weekly Epicodus code review of the fourth week of the intro course._
+_A near-perfect android copy of a human being, built for slave labor. You have escaped from captivity and are attempting to pass as a human. There is only one thing that can give you away: your emotions. Android systems can't perfectly copy human emotional responses. Humans use an empathy response examinaton, the Voight Kampff test, to identify replicants.
+
+Each round of the test, you are given a question designed to provoke your emotions. You must exhibit the correct emotional response in three categories: Feeling, Tone, and Intensity. If your response is abnormal, the examiner will become suspicious. They will ask you follow up questions until they are satisfied with your answer. If you pass enough questions, you'll convince them you are human and you go free. If you fail too many, you'll be violently "retired"._
 
 ## Specifications
 
@@ -47,7 +49,11 @@ _No known bugs._
 
 ## Support and contact details
 
-_Please direct questions  to the author felixop8@gmail.com_
+Please direct questions  to the authors:
+felixop8@gmail.com
+https://github.com/zjswanson
+https://github.com/Sean-Peterson
+https://github.com/Brendangrubb
 
 ## Technologies Used
 
@@ -57,7 +63,7 @@ _Written in HTML, CSS and JavaScript with the help of Jquery and Bootstrap._
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key][emojis]):
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src=img/felix.jpg width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) | [<img src="img/zach.jpg" width="100px;"/><br /><sub>Zach Awanson</sub>](https://github.com/zjswanson) | [<img src="img/sean.jpg" width="100px;"/><br /><sub>Sean Peterson</sub>](https://github.com/Sean-Peterson)| [<img src="img/brendan.jpg" width="100px;"/><br /><sub>Brendan Grubb</sub>](https://github.com/Brendangrubb) |
@@ -85,64 +91,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE._
-
-
-
-
-
-
-
-application behaviors:
-
-
-
-
-
-
-Project Mgmt:
-
-Back end
-
-Front End
-
-
-
-
-Wish List:
-
-Game behavior:
-  modify difficulty settings
-  display colors in different ways
-  display total suspicion in different ways
-  play through multiple Questions
-  associate content of questions with the hidden answer
-  display previous turns
-
-Styling:
-  Use blade-runner-esque typeface
-  change colors
-  Style page to look like VK machine
-
-
-Interactivity
-  Have page features move or color based on game input
-  animate display
-
-General:
-  list of multiple questions
-
-
-
-
-
-Sample Questions
-
-Your are watching a stage play.  The guests are enjoying the performance.  The appetizer consists of raw oysters.  The entree consists of boiled dog.
-
-
-easy
-  display all tips
-Medium
-  display all tips, but show colors in random order
-Hard
-  display just suspicion
