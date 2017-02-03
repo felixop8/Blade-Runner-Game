@@ -31,49 +31,49 @@ function Game() {
   this.wins=0;
   this.losses=0;
   // this.plays = [];
-  this.questions = [turtleQuestion,calfQuestion,waspQuestion,dogQuestion,butterflyQuestion];
+  this.questions = questionArray;
 }
 
 
+// emotion groups (Anger,Rude,Animated) (Anxiety,Worried,Distracted) (Disgust,Distant,reserved) (Fear,Agitated,Focused) (Sadness,Unsure,Subdued)
 var testPlay = new Play("anxiety","worried","focused");
 var turtleQuestion = new Question();
 turtleQuestion = {
-  feelingMenu: ["anger","anxiety","disgust"],
-  toneMenu: ["distant","worried","rude"],
-  intensityMenu: ["animated","focused","subdued"],
+  feelingMenu: ["anger","disgust","sadness"],
+  toneMenu: ["distant","rude","unsure"],
+  intensityMenu: ["animated","subdued","reserved"],
   questionsText: ["You're in a desert walking along the sand when all of a sudden you look down and you see a tortoise. It's crawling towards you. You reach down and you flip the tortoise on it's back. The tortoise lays on it's back, it's belly baking in the hot sun, it's legs trying to turn itself over but it can't, not without your help...but you're not helping. Why is that?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."],
 };
 var calfQuestion =  new Question()
 calfQuestion= {
-  feelingMenu: ["anxiety","disgust","sadness"],
-  toneMenu: ["worried","rude","agitated"],
+  feelingMenu: ["disgust","sadness","fear"],
+  toneMenu: ["distant","agitated","unsure"],
   intensityMenu: ["focused","subdued","reserved"],
   questionsText: ["It's your birthday. Someone gives you a calf skinned wallet. How does that make you feel?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."],
 };
 var waspQuestion =  new Question()
 waspQuestion= {
-  feelingMenu: ["disgust","sadness","fear"],
+  feelingMenu: ["anger","sadness","fear"],
   toneMenu: ["rude","agitated","unsure"],
-  intensityMenu: ["subdued","reserved","distracted"],
+  intensityMenu: ["animated","focused","subdued"],
   questionsText: ["You are watching television. You suddenly realize there's a wasp crawling up your arm. You crush it. How do you feel?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."],
 };
 var dogQuestion =  new Question()
 dogQuestion= {
-  feelingMenu: ["anxiety","disgust","fear"],
-  toneMenu: ["worried","rude","unsure"],
-  intensityMenu: ["focused","subdued","distracted"],
+  feelingMenu: ["anxiety","disgust","sadness"],
+  toneMenu: ["distant","worried","unsure"],
+  intensityMenu: ["subdued","reserved","distracted"],
   questionsText: ["You're watching a stage play. A banquet is in progress. The guests are enjoying an appetizer of raw oysters. The entree consists of boiled dog.", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."],
 };
 var butterflyQuestion =  new Question()
 butterflyQuestion= {
-  feelingMenu: ["anxiety","fear","sadness"],
-  toneMenu: ["worried","unsure","agitated"],
-  intensityMenu: ["focused","distracted","reserved"],
+  feelingMenu: ["anger","anxiety","sadness"],
+  toneMenu: ["worried","rude","unsure"],
+  intensityMenu: ["animated","subdued","distracted"],
   questionsText: ["You have a son. He shows you his butterfly collection, including the killing jar. How does this make you feel?", "Your response was unclear, wanna try that again?", "I'm still not sure you understand the question. Please rephrase.", "You're really not getting this, are you? Try one more time.", "Okay. Don't worry, they're just questions. Give it one more shot ahd we'll move on."],
 };
-
+var questionArray = [turtleQuestion,calfQuestion,waspQuestion,dogQuestion,butterflyQuestion];
 var globalGame = new Game();
-
 
 
 Game.prototype.newQuestion = function (question) {
@@ -142,6 +142,9 @@ Game.prototype.playDisplay = function(play) {
     colorArray = randomizeArray(colorArray);
     colorTriangles(colorArray[0],colorArray[1],colorArray[2]);
   }
+  if (this.roundSuspicion === 0) {
+    colorTriangles();
+  }
   var turncounter = this.turnCounter;
   var roundcounter = this.wins + this.losses;
   $("#question-text-field").text(globalGame.questions[roundcounter]["questionsText"][turncounter]);
@@ -190,6 +193,7 @@ var colorTriangles = function(feelingColor,toneColor,intensityColor) {
 
 
 
+globalGame.questions = randomizeArray(globalGame.questions);
 globalGame.newQuestion(globalGame.questions[0]);
 
 $(document).ready(function(){
@@ -224,8 +228,7 @@ $(document).ready(function(){
 
   });
 
-
-  $("#showTutorial").click(function(){
+  $("#show-tutorial-initiate-well").click(function(){
     console.log("hello");
     $("#tutorial").toggle();
     $("#tutorial").addClass("tutorial-visible");
@@ -238,7 +241,7 @@ $(document).ready(function(){
 
   });
 
-  
+
 
 
   $("#new-game-button").click(function() {
@@ -249,6 +252,7 @@ $(document).ready(function(){
     $(".submit-button").show();
     $("#answer-well").show();
     $("#tutorial-reset").show();
+    globalGame.questions = randomizeArray(globalGame.questions);
     $("#question-text-field").append(globalGame.questions[0]["questionsText"][0]);
   });
 

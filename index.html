@@ -30,8 +30,11 @@
             <button class="btn" type="button" name="hard" id="hard-button">Hard</button>
           </div>
         </div>
+        <div class="tutorial-btn">
+          <button type="button" name="showTutorial" id="show-tutorial-initiate-well" class="btn">Tutorial</button>
+        </div>
         <div id="new-game-button">
-          <button class="btn" type="button">Begin Test</button>
+          <button class="btn" id="new-game-actual-button"type="button">Begin Test</button>
         </div>
       </div>
 
@@ -42,29 +45,29 @@
       </div>
 
 <!-- well for player round win -->
-      <div id="player-win-round-well" class="well">
-        <h3>You win the round!</h3>
-        <h4>Keep up the good work, you're that much closer to freedom.</h4>
+      <div id="player-win-round-well" class="end-round well">
+        <p>You win the round!</p>
+        <h2>Keep up the good work, you're that much closer to freedom.</h2>
       </div>
 
 <!-- well for player round lose -->
-      <div id="player-lose-round-well" class="well">
-        <h3>You lose the round!</h3>
-        <h4>The interviewer is getting suspicious...</h4>
+      <div id="player-lose-round-well" class="end-round well">
+        <p>You lose the round!</p>
+        <h2>The interviewer is getting suspicious...</h2>
       </div>
 
 <!-- well for player win -->
-      <div id="player-win-game-well" class="well">
-        <h3>You Win!</h3>
-        <h4>You have convinced the interviewer that you are not a replicant. You are free to commit heinus acts of mayhem across the city.</h4>
-        <buttontype="button" name="reset" class="btn play-again">Play Again</button>
+      <div id="player-win-game-well" class="end-game well">
+        <p>You Win!</p>
+        <h1>You have convinced the interviewer that you are not a replicant. You are free to commit heinus acts of mayhem across the city.</h1>
+        <buttontype="button" name="reset" class="btn play-again play-again-win-lose-well">Play Again</button>
       </div>
 
 <!-- well for player lose -->
-      <div id="player-lose-game-well" class="well">
-        <h3>You Lose!</h3>
-        <h4>The interviewer has figured out that you're a replicant! Before you have time to run, he shoots you with his laser, right in your android face.</h4>
-        <button type="button" name="reset" class="btn play-again">Play Again</button>
+      <div id="player-lose-game-well" class="end-game well">
+        <p>You Lose!</p>
+        <h1>The interviewer has figured out that you're a replicant! Before you have time to run, he shoots you with his laser, right in your android face.</h1>
+        <button type="button" name="reset" class="btn play-again play-again-win-lose-well">Play Again</button>
       </div>
 
 
@@ -205,9 +208,11 @@
         <div class="row">
         <div class="col-md-3">
           <div id="tutorial-reset" class="well">
-
             <div class="reset-button">
               <button type="button" name="reset" id="restart-game" class="btn  play-again">Restart Test</button>
+            </div>
+            <div class="tutorial-btn">
+              <button type="button" name="showTutorial" id="showTutorial" class="btn">Tutorial</button>
             </div>
           </div>
         </div>
@@ -287,14 +292,8 @@
       </div>
     </form>
 
-    <div class="reset-button">
-      <button type="button" name="reset" id="restart-game" class="btn  play-again">Restart Test</button>
-    </div>
 
 
-    <div class="tutorial-btn">
-      <button type="button" name="showTutorial" id="showTutorial" class="btn">Tutorial</button>
-    </div>
 
     <div id="tutorial">
         <h1>How to Play</h1>
