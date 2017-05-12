@@ -9,6 +9,9 @@ _A near-perfect android copy of a human being, built for slave labor. You have e
 
 Each round of the test, you are given a question designed to provoke your emotions. You must exhibit the correct emotional response in three categories: Feeling, Tone, and Intensity. If your response is abnormal, the examiner will become suspicious. They will ask you follow up questions until they are satisfied with your answer. If you pass enough questions, you'll convince them you are human and you go free. If you fail too many, you'll be violently "retired"._
 
+# ![pageres](img/shot.png)
+
+
 ## Specifications
 
 
